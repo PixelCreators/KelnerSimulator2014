@@ -1,13 +1,14 @@
 #include <iostream>
+#include <string.h>
 
 using namespace std;
-char n;
+string input;
 
 int main()
 {
 	cout << "Interpreter komend kelnera v0.Pierdyliard\nWpisz komendy:\n";
-	while (cin >> n && n != 'q'){ 
-		cout << n << endl;
+	while (cin >> input && input != "quit"){ 
+		cout << input << endl;
 	}
 	cout << "Hello World!" << endl;
 	return 0;
