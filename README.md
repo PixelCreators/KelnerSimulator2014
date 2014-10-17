@@ -1,4 +1,6 @@
 KelnerSimulator2014
 ===================
 
-Projekt na KCK
+*Projekt na KCK*
+
+Coding Time!
