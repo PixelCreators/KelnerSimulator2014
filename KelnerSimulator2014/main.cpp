@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	bool shit;
+	bool shit; // Booyah!
 	cout << "Hello World!" << endl;
 	return 0;
 }
