@@ -1,15 +1,32 @@
 #include <iostream>
-#include <string.h>
-
+#include <string>
+#include <sstream>
+#include <vector>
 using namespace std;
 string input;
 
+// ustawienia kolejki
+vector< vector<string> > kolejka;
+
 int main()
 {
-	cout << "Interpreter komend kelnera v0.Pierdyliard\nWpisz komendy:\n";
-	while (cin >> input && input != "quit"){ 
-		cout << input << endl;
+    // input
+	cout << "Interpreter komend kelnera vPierdyliard\nWpisz komendy:\n";
+	while (cin >> input && (input != "quit" && input != "q")){
+        stringstream ss(input);
+        
+        istream_iterator<string> begin(ss);
+        istream_iterator<string> end;
+        
+        vector<string> polecenie(begin, end);
+        
+        kolejka.push_back(polecenie);
 	}
-	cout << "Hello World!" << endl;
+    
+    
+    
+    
+    // quit
+	cout << "stopping. no errors on runtime" << endl;
 	return 0;
 }
