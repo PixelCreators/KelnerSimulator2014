@@ -1,7 +1,10 @@
 KelnerSimulator2014
 ===================
 
-*Projekt na KCK*
+(opcja) podmiot (opcja) czynność (opcja + opcja)
 
-Coding Time!
-Huh?
+(wszyscy) kelnerzy (numer) podaj do stołu (stół + danie)
+                           sprzątnij ze stołu (stół)
+                           odbierz zamówienie ze stołu (stół)
+                           zmywaj
+                           zamiataj przy stole (stół)
