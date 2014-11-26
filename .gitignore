@@ -154,3 +154,35 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+# =============== #
+# Unity generated #
+# =============== #
+Unity/Temp/
+Unity/Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+Unity/ExportedObj/
+Unity/obj/
+Unity/*.svd
+Unity/*.userprefs
+Unity/*.csproj
+Unity/*.pidb
+Unity/*.suo
+Unity/*.sln
+Unity/*.user
+Unity/*.unityproj
+Unity/*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+Unity/.DS_Store
+Unity/.DS_Store?
+Unity/._*
+Unity/.Spotlight-V100
+Unity/.Trashes
+Unity/ehthumbs.db
+Unity/Thumbs.db
