@@ -1,24 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TextInputFieldScript : MonoBehaviour
 {
+    Text currentInputFieldText;
 
-	void Start ()
+    void Start()
     {
-	
-	}
-	
-	void Update () 
-    {
-	
-	}
-
-    public void sendTextToGlobal()
-    {
-        GlobalScript.lastCommandFromPlayer; 
+        currentInputFieldText = gameObject.GetComponent<Text>();
     }
 
-
+    public string getCommandFromInput()
+    {
+        return currentInputFieldText.text;
+    }
 
 }
