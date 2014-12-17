@@ -1,22 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+
 public class WaitressControllerScript : MonoBehaviour
 {
     public float speed = 1.5f;
     public float rotationSpeed = 2.0f;
 
-    //TODO: to poniżej do zmiany. Powinno być  dynamiczne wskazywanie obiektów, na razie jest stałe.
-    public Transform targetObject;
-
+    public List<Path> avaliblePaths;
 
     public TextInputFieldScript inputCommandField;
+    public Transform targetObject;
 
     public Text lastCommandText;
 
     private float step;
     private float angle;
-
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class WaitressControllerScript : MonoBehaviour
 
     void Update()
     {
-        //moveTowards(targetObject); //Przesuwanie w stronę obiektu, zakomentowane. Jeśli chcesz przesunąć w stronę punktu odkomentuj.
+        moveTowards(); //Przesuwanie w stronę obiektu, zakomentowane. Jeśli chcesz przesunąć w stronę punktu odkomentuj.
     }
 
     public void invokeCommand(string command)
@@ -34,7 +34,7 @@ public class WaitressControllerScript : MonoBehaviour
         // TODO: dodać wykonywanie komend przez kelnerkę. 
         if (command.Equals("moveTowards"))
         {
-            moveTowards(targetObject);
+            //moveTowards();
             Debug.Log("Wykonano polecenie moveTowards!");
         }
     }
@@ -42,17 +42,13 @@ public class WaitressControllerScript : MonoBehaviour
     public void interpretCommand()
     {
         /*Funkcja wywoływana po naciśnięciu przycisku wyślij.*/
-
-        invokeCommand(inputCommandField.getCommandFromInput());
+        Debug.Log("Interpret");
+        //invokeCommand(inputCommandField.getCommandFromInput());
     }
 
-    public void moveTowards(Transform targetObject)
+    public void moveTowards()
     {
-        /* Przesuwamy postać o krok równy $speed metrów na sekundę.
-         * Obracamy ją także w stronę obiektu o $rotationSpeed metrów na sekundę. */
-     
-        //Sprawdzanie równości wektorów działa, ale jest nieoptymalne. TODO: zamienić na sprawdzanie float x,y,z.
-        if (rigidbody.position != targetObject.position)
+        if(rigidbody.position != targetObject.position)
         {
             step = speed * Time.deltaTime;
             angle = rotationSpeed * Time.deltaTime;
@@ -60,4 +56,12 @@ public class WaitressControllerScript : MonoBehaviour
             rigidbody.rotation = Quaternion.Slerp(rigidbody.rotation, Quaternion.LookRotation(targetObject.position - rigidbody.position), angle);
         }
     }
+
+    private void changeObjectPositionAndAngle()
+    {
+        /* Przesuwamy postać o krok równy $speed metrów na sekundę.
+         * Obracamy ją także w stronę obiektu o $rotationSpeed metrów na sekundę. */
+        
+    }
+
 }
