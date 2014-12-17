@@ -24,7 +24,8 @@ public class WaitressControllerScript : MonoBehaviour
 
     void Update()
     {
-        moveTowards(); //Przesuwanie w stronę obiektu, zakomentowane. Jeśli chcesz przesunąć w stronę punktu odkomentuj.
+        
+        //moveTowards(); //Przesuwanie w stronę obiektu, zakomentowane. Jeśli chcesz przesunąć w stronę punktu odkomentuj.
     }
 
     public void invokeCommand(string command)
@@ -34,7 +35,7 @@ public class WaitressControllerScript : MonoBehaviour
         // TODO: dodać wykonywanie komend przez kelnerkę. 
         if (command.Equals("moveTowards"))
         {
-            //moveTowards();
+            moveTowards();
             Debug.Log("Wykonano polecenie moveTowards!");
         }
     }
@@ -43,7 +44,7 @@ public class WaitressControllerScript : MonoBehaviour
     {
         /*Funkcja wywoływana po naciśnięciu przycisku wyślij.*/
         Debug.Log("Interpret");
-        //invokeCommand(inputCommandField.getCommandFromInput());
+        invokeCommand(inputCommandField.getCommandFromInput());
     }
 
     public void moveTowards()
