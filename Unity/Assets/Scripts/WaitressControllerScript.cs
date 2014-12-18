@@ -17,7 +17,7 @@ public class WaitressControllerScript : MonoBehaviour
     private float angle;
     private string waitressName;
 
-    private Transform currentTargetObject;
+    public Transform currentTargetObject;
 
     void Awake()
     {
@@ -26,21 +26,23 @@ public class WaitressControllerScript : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     void Update()
     {
+        moveTowards();
     }
 
     
     public bool moveTowards()
     {
+
         //Zwraca true gdy kelnerka dotrze do docelowego obiektu.
         if (!isPositionEquals())
         {
-            changeObjectPosition();
             changeObjectRotation();
+            changeObjectPosition();
             return false;
         }
         return true;
@@ -60,7 +62,14 @@ public class WaitressControllerScript : MonoBehaviour
 
     bool isPositionEquals()
     {
-        return rigidbody.position == currentTargetObject.position;
+        return Vector3.Distance(rigidbodyComponent.position, currentTargetObject.position) <= 1;
     }
+
+    void setCurrentTarget(Transform newTarget)
+    {
+        currentTargetObject = newTarget;
+    }
+
+
 }
 
