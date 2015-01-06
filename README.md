@@ -3,12 +3,15 @@ KelnerSimulator2014
 
 0. Cokolwiek było wcześniej to był bullshit. Mamy tydzień - pierwszy termin ten czwartek, drugi termin kolejny.
  
-**DO JUTRA** :
-1. Grzegorz : 
-                           [ ] interpreter
-                           [ ] interpreter
-                           [ ] interpreter
-                           [ ] modele do wystroju
+**DO JUTRA** :  
+
+1. Grzegorz :   
+
+                           [ ] interpreter  
+                           [ ] interpreter  
+                           [ ] interpreter  
+                           [ ] modele do wystroju  
+                           
 2. Marcin :
                            [ ] 2d…2d…2d…2d…2d wymyśl sposób żeby rozróżniać stołu, kelnerów i potrawy. Trochę podciągnąć UI pod ascetyczny
                            [ ] słowa do słownika
