@@ -18,12 +18,12 @@ Marcin :
                            [ ] słowa do słownika  
                            [ ] pomóc Mateuszowi w czymś… jeśli już masz gita i unity i ugh to wszystko co potrzebne wam do kodowania  
 
-3. Weronika :  
+Weronika :  
 
                            [ ] obiecałaś dokumentację, przygotuj sobie jakiś wzorzec byś mogła na bierząco pisać  
                            [ ] plan restauracji wymyśl - Grzegorz siądzie i dorobi assety, tylko chce wiedzieć co robić i na co  
                            [ ] nazwy potraw
-4. Mateusz :  
+Mateusz :  
 
                            [ ] zaczepenie skryptu interpretera, żeby Grzegorz mógł tylko funkcję zmieniać  
                            [ ] wrzucenie kilku punktów nawigacji żeby można było chodzić
