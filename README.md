@@ -21,11 +21,11 @@ Marcin :
 3. Weronika :  
 
                            [ ] obiecałaś dokumentację, przygotuj sobie jakiś wzorzec byś mogła na bierząco pisać  
-                           
-                           [ ] plan restauracji wymyśl - Grzegorz siądzie i dorobi assety, tylko chce wiedzieć co robić i na co
+                           [ ] plan restauracji wymyśl - Grzegorz siądzie i dorobi assety, tylko chce wiedzieć co robić i na co  
                            [ ] nazwy potraw
-4. Mateusz :
-                           [ ] zaczepenie skryptu interpretera, żeby Grzegorz mógł tylko funkcję zmieniać
+4. Mateusz :  
+
+                           [ ] zaczepenie skryptu interpretera, żeby Grzegorz mógł tylko funkcję zmieniać  
                            [ ] wrzucenie kilku punktów nawigacji żeby można było chodzić
                            [ ] poprawienie ruchu, żeby kurde nie poklatkowo
                            [ ] kilka agentów
