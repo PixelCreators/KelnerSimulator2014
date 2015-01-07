@@ -74,6 +74,11 @@ public class InterpreterEngine {
 			}
 			// słowo istnieje, można tłumaczyć polecenie
 			switch(wordType) {
+				default: // ustawianie potrawy
+						if(wordType < 0) {
+							opcja = wordType * -1;
+						}
+						break;
 				case 2: // kelner
 						if(int.TParse(listInput[i+1], tmpNumber) == 1) { // dany kelner numer
 							kelner = tmpNumber;
@@ -84,7 +89,7 @@ public class InterpreterEngine {
 						// else kelner lookup failed ;D
 						break;
 
-				// dodam więcej caseów
+				// dodam więcej caseów jak dostanę słownik
 			}
 			return new Tuple<int, int, int, int>(kelner, zadanie, opcja, stolik);
 		}
