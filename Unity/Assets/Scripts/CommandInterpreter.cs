@@ -1,50 +1,52 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
-public class CommandInterpreter : MonoBehaviour 
+namespace Assets.Scripts
 {
-    public TextInputFieldScript inputCommandField;
-
-    public Text lastCommandText;
-
-	public InterpreterEngine interpreter;
-
-    private string lastCommand;
-
-    void Awake()
+    public class CommandInterpreter : MonoBehaviour 
     {
-        inputCommandField = GameObject.Find("InputCommandFieldText").GetComponent<TextInputFieldScript>();
-        lastCommandText = GameObject.Find("LastCommand").GetComponent<Text>();
-    }
+        public TextInputFieldScript inputCommandField;
 
-    public void interpretCommand()
-    {
-        getCommandFromInput();
-        invokeCommand();
-        showLastCommand();
-    }
+        public Text lastCommandText;
 
-    public void invokeCommand()
-    {
-		interpreter = new InterpreterEngine();
-		List<List<string>> dictionary = new List<List<string>>(interpreter.readFile("słownik.txt"));
-		List<List<string>> cookbook = new List<List<string>>(interpreter.readFile("potrawy.txt"));
+        public InterpreterEngine interpreter;
 
-		List<int> commandTranslation = new List<int>(interpreter.parseInput(lastCommand, dictionary, cookbook));
+        private string lastCommand;
 
-		// dodam jeszcze obsługę błędów
-		// do menedżera kelnerów przesyłamy 4krotkę numerKelnera, numerZadania, numerOpcji, numerStolika
-    }
+        void Awake()
+        {
+            inputCommandField = GameObject.Find("InputCommandFieldText").GetComponent<TextInputFieldScript>();
+            lastCommandText = GameObject.Find("LastCommand").GetComponent<Text>();
+        }
 
-    void showLastCommand()
-    {
-        lastCommandText.text = lastCommand;
-    }
+        public void interpretCommand()
+        {
+            getCommandFromInput();
+            invokeCommand();
+            showLastCommand();
+        }
 
-    void getCommandFromInput()
-    {
-        lastCommand = inputCommandField.getCommandFromInput();
+        public void invokeCommand()
+        {
+            interpreter = new InterpreterEngine();
+            List<List<string>> dictionary = new List<List<string>>(interpreter.readFile("słownik.txt"));
+            List<List<string>> cookbook = new List<List<string>>(interpreter.readFile("potrawy.txt"));
+
+            List<int> commandTranslation = new List<int>(interpreter.parseInput(lastCommand, dictionary, cookbook));
+
+            // dodam jeszcze obsługę błędów
+            // do menedżera kelnerów przesyłamy 4krotkę numerKelnera, numerZadania, numerOpcji, numerStolika
+        }
+
+        void showLastCommand()
+        {
+            lastCommandText.text = lastCommand;
+        }
+
+        void getCommandFromInput()
+        {
+            lastCommand = inputCommandField.getCommandFromInput();
+        }
     }
 }

@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class GameBehaviour : MonoBehaviour
+namespace Assets.Scripts
 {
-    //Jeszcze pusto ;)
-
-    void Start()
+    public class GameBehaviour : MonoBehaviour
     {
+        //Jeszcze pusto ;)
 
-    }
+        void Start()
+        {
 
-    void Update()
-    {
+        }
 
+        void Update()
+        {
+
+        }
     }
 }

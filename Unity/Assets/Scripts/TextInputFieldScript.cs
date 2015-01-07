@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
-public class TextInputFieldScript : MonoBehaviour
+namespace Assets.Scripts
 {
-    Text currentInputFieldText;
-
-    void Start()
+    public class TextInputFieldScript : MonoBehaviour
     {
-        currentInputFieldText = gameObject.GetComponent<Text>();
-    }
+        Text currentInputFieldText;
 
-    public string getCommandFromInput()
-    {
-        return currentInputFieldText.text;
-    }
+        void Start()
+        {
+            currentInputFieldText = gameObject.GetComponent<Text>();
+        }
 
+        public string getCommandFromInput()
+        {
+            return currentInputFieldText.text;
+        }
+
+    }
 }
