@@ -15,9 +15,31 @@ public class InterpreterEngine {
 			List<string> listAlternatives = inputLine.Split(' ').ToList<string>();
 			listAlternatives.Reverse();
 
+			//obsługa długich wyrażeń
+			for(int i = 0; i < listAlternatives.Count(); i++) {
+				int j = 0;
+				int k = 0;
+				if(listAlternatives[i].StartsWith('[')) {
+					for(int j = i+1; j < listAlternatives.Count(); j++) {
+						if(listAlternatives[j].EndsWith(']')) {
+							for(k = i+1; k <= j; k++) {
+								listAlternatives[i] += listAlternatives[k];
+							} // cleanup, pozbawienie klamr, reset limitera
+							listAlternatives.RemoveRange((i+1), (k - i));
+							listAlternatives[i].Remove(0,1);
+							listAlternatives[i].Remove(listAlternatives[i].Length -1);
+							k = 0;
+							break;
+						}
+						j = 0;
+					}
+				}
+			}
+
 			listMain.Add(listAlternatives);
 			listAlternatives = null;
 		}
+
 
 		return listMain;
 	}
@@ -74,13 +96,8 @@ public class InterpreterEngine {
 			}
 			// słowo istnieje, można tłumaczyć polecenie
 			switch(wordType) {
-				default: // ustawianie potrawy
-						if(wordType < 0) {
-							opcja = wordType * -1;
-						}
-						break;
-				case 2: // kelner
-						if(int.TParse(listInput[i+1], tmpNumber) == 1) { // dany kelner numer
+					case 2,3: // kelner, kelnerka
+						if(int.Parse(listInput[i+1], tmpNumber) == 1) { // numer
 							kelner = tmpNumber;
 						}
 						else if(i == 1) { // wszyscy kelnerzy
@@ -88,8 +105,11 @@ public class InterpreterEngine {
 						}
 						// else kelner lookup failed ;D
 						break;
-
-				// dodam więcej caseów jak dostanę słownik
+					default: // ustawianie potrawy
+						if(wordType < 0) {
+							opcja = wordType * -1;
+						}
+						break;
 			}
 			return new Tuple<int, int, int, int>(kelner, zadanie, opcja, stolik);
 		}
