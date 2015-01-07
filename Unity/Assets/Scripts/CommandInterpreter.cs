@@ -28,10 +28,11 @@ public class CommandInterpreter : MonoBehaviour
 
     public void invokeCommand()
     {
+		interpreter = new InterpreterEngine();
 		List<List<string>> dictionary = new List<List<string>>(interpreter.readFile("słownik.txt"));
 		List<List<string>> cookbook = new List<List<string>>(interpreter.readFile("potrawy.txt"));
 
-		Tuple<int, int, int, int> commandTranslation = new Tuple<int, int, int, int>(interpreter.parseInput(lastCommand, dictionary, cookbook));
+		List<int> commandTranslation = new List<int>(interpreter.parseInput(lastCommand, dictionary, cookbook));
 
 		// dodam jeszcze obsługę błędów
 		// do menedżera kelnerów przesyłamy 4krotkę numerKelnera, numerZadania, numerOpcji, numerStolika
