@@ -1,0 +1,120 @@
+fileFormatVersion: 2
+guid: cb1b90400e4d25b4caf54ddb4ed58f97
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: arm_1_l
+    100002: arm_1_r
+    100004: arm_2_l
+    100006: arm_2_r
+    100008: Bone
+    100010: bump
+    100012: foot_l
+    100014: foot_r
+    100016: hand_l
+    100018: hand_r
+    100020: head
+    100022: hips
+    100024: //RootNode
+    100026: leg_1_l
+    100028: leg_1_r
+    100030: leg_2_l
+    100032: leg_2_r
+    100034: neck
+    100036: Skel_Anastazja
+    100038: spine_1
+    100040: spine_2
+    100042: tail
+    100044: tail_1
+    100046: tail_2
+    100048: tail_3
+    100050: tail_4
+    100052: waist
+    400000: arm_1_l
+    400002: arm_1_r
+    400004: arm_2_l
+    400006: arm_2_r
+    400008: Bone
+    400010: bump
+    400012: foot_l
+    400014: foot_r
+    400016: hand_l
+    400018: hand_r
+    400020: head
+    400022: hips
+    400024: //RootNode
+    400026: leg_1_l
+    400028: leg_1_r
+    400030: leg_2_l
+    400032: leg_2_r
+    400034: neck
+    400036: Skel_Anastazja
+    400038: spine_1
+    400040: spine_2
+    400042: tail
+    400044: tail_1
+    400046: tail_2
+    400048: tail_3
+    400050: tail_4
+    400052: waist
+    4300000: kelnerka
+    7400000: Default Take
+    7400002: PoseLib
+    7400004: Skel_AnastazjaAction
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
