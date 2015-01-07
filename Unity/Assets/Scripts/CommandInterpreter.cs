@@ -9,6 +9,8 @@ public class CommandInterpreter : MonoBehaviour
 
     public Text lastCommandText;
 
+	public InterpreterEngine interpreter;
+
     private string lastCommand;
 
     void Awake()
@@ -26,41 +28,13 @@ public class CommandInterpreter : MonoBehaviour
 
     public void invokeCommand()
     {
-        if (lastCommand.Equals("moveTowards"))
-        {
-            Debug.Log("Wykonano polecenie moveTowards!");
-        }
+		List<List<string>> dictionary = new List<List<string>>(interpreter.readFile("słownik.txt"));
+		List<List<string>> cookbook = new List<List<string>>(interpreter.readFile("potrawy.txt"));
 
+		Tuple<int, int, int, int> commandTranslation = new Tuple<int, int, int, int>(interpreter.parseInput(lastCommand, dictionary, cookbook));
 
-        //(opcja) podmiot (opcja) czynność (opcja + opcja)
-        /**
-
-        int iKelner;
-        var commandChain:string[] = command.Split(" ");
-
-        if (commandChain[0].Equals("niech")) {
-            if(commandChain[1].Equals("każdy") && commandChain[2].Equals("kelner")) {
-                iKelner = -1;
-            }
-            else if(!commandChain[1].Equals("kelner") || !int.TryParse(commandChain[2], out iKelner)) {
-                iKelner = 0; // nie można sparsować, w innym wypadku już podstawia
-            }
-            if(commandChain[3].Equals("zmywaj")) {
-                //call kelner zmywaj(iKelner)
-            }
-            else if(commandChain[3].Equals("poda") && commandChain[5].Equals("do") && commandChain[6].Equals("stołu")) {
-                //call kelner danie stół podaj(iKelner, commandChain[4], int.Parse(commandChain[7])
-            }
-            else if(commandChain[3].Equals("sprzątnie") && commandChain[4].Equals("stół")) {
-                //call kelner stół sprzątnij(iKelner, int.Parse(commandChain[5]))
-                // jeśli brak id stołu to sprzątnij wszystkie stoły 
-            }
-            else if(commandChain[3].Equals("odbierze") && commandChain[4].Equals("zamówienie") && commandChain[5].Equals("od") && commandChain[6].Equals("stołu")) {
-                //call kelner stół odbierz(iKelner, int.Parse(commandChain[7]))
-                // jeśli brak id stołu to odbierz zamówienia ze wszystkich stołów
-            }
-        }
-        /**/
+		// dodam jeszcze obsługę błędów
+		// do menedżera kelnerów przesyłamy 4krotkę numerKelnera, numerZadania, numerOpcji, numerStolika
     }
 
     void showLastCommand()
