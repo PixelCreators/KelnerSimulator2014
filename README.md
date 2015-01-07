@@ -7,9 +7,9 @@ KelnerSimulator2014
 
 Grzegorz :   
 
-                           [ ] interpreter  
-                           [ ] interpreter  
-                           [ ] interpreter  
+                           [X] interpreter : parser : słownik
+                           [X] interpreter : parser : input
+                           [ ] interpreter : połączenie obydwu
                            [ ] modele do wystroju  
                            
 Marcin :  
