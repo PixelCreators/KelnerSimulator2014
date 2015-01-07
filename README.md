@@ -13,7 +13,7 @@ Grzegorz :
                            [X] interpreter : potrawy
                            [X] interpreter : wysyłanie komunikatów BETA
                            [ ] interpreter : obsługa błędów
-                           [ ] modele do wystroju  
+                           [X] modele do wystroju  
                            [ ] interpreter : bughunt po tym jak mateusz zacznie robić swoje
                            
 Marcin :  
