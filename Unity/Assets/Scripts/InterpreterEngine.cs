@@ -20,7 +20,7 @@ public class InterpreterEngine {
 				int j = 0;
 				int k = 0;
 				if(listAlternatives[i].StartsWith('[')) {
-					for(int j = i+1; j < listAlternatives.Count(); j++) {
+					for(j = i+1; j < listAlternatives.Count(); j++) {
 						if(listAlternatives[j].EndsWith(']')) {
 							for(k = i+1; k <= j; k++) {
 								listAlternatives[i] += listAlternatives[k];
@@ -80,9 +80,11 @@ public class InterpreterEngine {
 				wordType = parseDictionary(tmp, tmpCookbook);
 				if(wordType == -1) {
 					//error NaN - nie ma takiej potrawy
-					if(!int.Parse(tmpWord) {
+					 if(!int.Parse(tmpWord) {
 						//error NaN - to nie liczba, syntax error ;D
+						return new Tuple<int, int, int, int>(-1, -1, -1, -1);
 					}
+					return new Tuple<int, int, int, int>(-1, -1, 0, -1);
 				}
 				else {
 					// można bezpiecznie usunąć potrawę z tmpCookbook
@@ -99,14 +101,16 @@ public class InterpreterEngine {
 			// słowo istnieje, można tłumaczyć polecenie
 			switch(wordType) {
 					// każdy każda
-					case 2,3 :
+					case 2 :
+					case 3 :
 						if(listInput[i+1] == 3 || listInput[i+1] == 4) { // kelner kelnerka
 							kelner = 0;
 							listInput.RemoveAt(i+1); // szybszy parse, blok kolejnego warunku
 						}
 						break;
 					// kelner kelnerka
-					case 3,4 :
+					case 3 :
+					case 4 :
 						if(listInput[i+1] == 5) { // numer
 							kelner = listInput[i+1];
 							listInput.RemoveAt(i+1);
