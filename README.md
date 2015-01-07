@@ -9,8 +9,9 @@ Grzegorz :
 
                            [X] interpreter : parser : słownik
                            [X] interpreter : parser : input
-                           [ ] interpreter : połączenie obydwu
+                           [X] interpreter : połączenie obydwu
                            [ ] modele do wystroju  
+                           [ ] interpreter : bughunt po tym jak mateusz zacznie robić swoje
                            
 Marcin :  
 
