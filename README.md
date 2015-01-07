@@ -34,3 +34,5 @@ Mateusz :
                            [ ] poprawienie ruchu, żeby kurde nie poklatkowo
                            [ ] kilka agentów
                            [ ] hud dla zamówień
+                           [ ] jak mamy stolik to wyświetl nad nim wykrzyknik że jest zamówienie
+                           [ ] hud dla stopera który mierzy czas między powstaniem zamówienia / gotowym jedzeniem a wykonaniem zadania 
