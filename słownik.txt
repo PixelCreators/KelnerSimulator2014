@@ -6,12 +6,12 @@ kelner garson ober
 kelnerka fraulein
 kelnerzy
 numer [o identyfikatorze] [o numerze]
-zmywa czyści oczyści wyczyści zmyje szoruje myje pucuje oczyści
-poda obsłuży zaserwuje zaniesie da
 do na
+od
 stół stolik stanowisko miejsce
 stołu stolika stanowiska miejsca
+zmywa czyści oczyści wyczyści zmyje szoruje myje pucuje oczyści
+poda obsłuży zaserwuje zaniesie da
 sprzątnie
 odbierze przyjmie uzyska zbierze zabierze
-zamówienie 
-od
+zamówienie
