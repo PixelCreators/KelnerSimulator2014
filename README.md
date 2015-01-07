@@ -10,7 +10,7 @@ Grzegorz :
                            [X] interpreter : parser : słownik
                            [X] interpreter : parser : input
                            [X] interpreter : połączenie obydwu
-                           [ ] interpreter : potrawy
+                           [X] interpreter : potrawy
                            [ ] interpreter : wysyłanie komunikatów
                            [ ] interpreter : obsługa błędów
                            [ ] modele do wystroju  
@@ -19,7 +19,7 @@ Grzegorz :
 Marcin :  
 
                            [ ] 2d…2d…2d…2d…2d wymyśl sposób żeby rozróżniać stołu, kelnerów i potrawy. Trochę podciągnąć UI pod ascetyczny  
-                           [ ] słowa do słownika  
+                           [X] słowa do słownika  
                            [ ] pomóc Mateuszowi w czymś… jeśli już masz gita i unity i ugh to wszystko co potrzebne wam do kodowania  
 
 Weronika :  
@@ -34,5 +34,6 @@ Mateusz :
                            [ ] poprawienie ruchu, żeby kurde nie poklatkowo
                            [ ] kilka agentów
                            [ ] hud dla zamówień
-                           [ ] jak mamy stolik to wyświetl nad nim wykrzyknik że jest zamówienie
-                           [ ] hud dla stopera który mierzy czas między powstaniem zamówienia / gotowym jedzeniem a wykonaniem zadania 
+			   [ ] na razie każdy stolik ma generować zamówienia i je odbierać. może być stolik 4 zamawia na stolik 1
+                           [ ] BONUS : jak mamy stolik to wyświetl nad nim wykrzyknik że jest zamówienie
+                           [ ] BONUS : hud dla stopera który mierzy czas między powstaniem zamówienia / gotowym jedzeniem a wykonaniem zadania 
