@@ -11,7 +11,7 @@ Grzegorz :
                            [X] interpreter : parser : input
                            [X] interpreter : połączenie obydwu
                            [X] interpreter : potrawy
-                           [ ] interpreter : wysyłanie komunikatów
+                           [X] interpreter : wysyłanie komunikatów BETA
                            [ ] interpreter : obsługa błędów
                            [ ] modele do wystroju  
                            [ ] interpreter : bughunt po tym jak mateusz zacznie robić swoje
@@ -29,7 +29,7 @@ Weronika :
                            [X] nazwy potraw
 Mateusz :  
 
-                           [ ] zaczepenie skryptu interpretera, żeby Grzegorz mógł tylko funkcję zmieniać  
+                           [X] zaczepenie skryptu interpretera, żeby Grzegorz mógł tylko funkcję zmieniać  
                            [ ] wrzucenie kilku punktów nawigacji żeby można było chodzić
                            [ ] poprawienie ruchu, żeby kurde nie poklatkowo
                            [ ] kilka agentów
