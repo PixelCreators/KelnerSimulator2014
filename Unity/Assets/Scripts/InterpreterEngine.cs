@@ -69,7 +69,7 @@ public class InterpreterEngine
         return wordType;
     }
 
-    public static Tuple<int, int, int, int> parseInput(string input, List<List<string>> dictionary,
+    public static List<int> parseInput(string input, List<List<string>> dictionary,
         List<List<string>> cookbook)
     {
 
@@ -101,9 +101,9 @@ public class InterpreterEngine
                     if (!int.Parse(tmpWord))
                     {
                         //error NaN - to nie liczba, syntax error ;D
-                        return new Tuple<int, int, int, int>(-1, -1, -1, -1);
+						return new List<int>(new int[] {-1, -1, -1, -1});
                     }
-                    return new Tuple<int, int, int, int>(-1, -1, 0, -1);
+					return new List<int>(new int[] {-1, -1, 0, -1});
                 }
                 else
                 {
@@ -199,7 +199,7 @@ public class InterpreterEngine
                     // walimy mocniej
                     break;
             }
-            return new Tuple<int, int, int, int>(kelner, zadanie, opcja, stolik);
+			return new List<int>(new int[] {kelner, zadanie, opcja, stolik});
         }
     }
 }
