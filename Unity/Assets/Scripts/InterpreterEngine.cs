@@ -94,21 +94,68 @@ public class InterpreterEngine {
 				// można bezpiecznie usunąć słowo z tmpDictionary
 				tmpDictionary.RemoveAt(wordType);
 			}
+			// 0	   1      2      3       4         5      6   7   8     9      10     11    12        13         14
+			// [niech][każdy][każda][kelner][kelnerka][numer][do][od][stół][stołu][zmywa][poda][sprzątnie][odbierze][zamówienie]
 			// słowo istnieje, można tłumaczyć polecenie
 			switch(wordType) {
-					case 2,3: // kelner, kelnerka
-						if(int.Parse(listInput[i+1], tmpNumber) == 1) { // numer
-							kelner = tmpNumber;
-						}
-						else if(i == 1) { // wszyscy kelnerzy
+					// każdy każda
+					case 2,3 :
+						if(listInput[i+1] == 3 || listInput[i+1] == 4) { // kelner kelnerka
 							kelner = 0;
+							listInput.RemoveAt(i+1); // szybszy parse, blok kolejnego warunku
 						}
-						// else kelner lookup failed ;D
 						break;
-					default: // ustawianie potrawy
-						if(wordType < 0) {
-							opcja = wordType * -1;
+					// kelner kelnerka
+					case 3,4 :
+						if(listInput[i+1] == 5) { // numer
+							kelner = listInput[i+1];
+							listInput.RemoveAt(i+1);
 						}
+						break;
+						
+					// odbierze
+					case 13 :
+						if(listInput[i+1] == 7 && listInput[i+2] == 9) { // od stołu
+							stolik = listInput[i+3];
+
+							if(listInput[i+4] == 14) { // zamówienie
+								zadanie = 0; // odbierz zamówienie
+								listInput.RemoveAt(i+4);
+							}
+							else { //listInput to inne słowo bądź nie istnieje
+								zadanie = 2; // sprzątnij stół
+							}
+							listInput.RemoveRange((i+1), 3);
+						}
+						break;
+					// poda do stołu
+					case 11 :
+						if(listInput[i+1] == 6 && listInput[i+2] == 9 && listInput[i+4] == 14) { // do stołu _ zamówienie
+							stolik = listInput[i+3];
+							zadanie = 1; // podaj zamówienie
+							if(listInput[i+5] < 0) { // typ dania jest poprawny
+								opcja = listInput[i+5]; // rodzaj zamówienia
+								listInput.RemoveAt(i+5);
+							}
+							listInput.RemoveRange((i+1), 4);
+						}
+						break;
+					// sprzątnie stół
+					case 12 :
+						if(listInput[i+1] == 8) {
+							stolik = listInput[i+2];
+							zadanie = 2;
+							listInput.RemoveRange((i+1), 2);
+						}
+						break;
+					// zmywa
+					case 10 :
+						zadanie = 3;
+						break;
+					default :
+						// err coś się walnęło 
+						int i = 1/0;
+						// walimy mocniej
 						break;
 			}
 			return new Tuple<int, int, int, int>(kelner, zadanie, opcja, stolik);
