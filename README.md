@@ -10,6 +10,9 @@ Grzegorz :
                            [X] interpreter : parser : słownik
                            [X] interpreter : parser : input
                            [X] interpreter : połączenie obydwu
+                           [ ] interpreter : potrawy
+                           [ ] interpreter : wysyłanie komunikatów
+                           [ ] interpreter : obsługa błędów
                            [ ] modele do wystroju  
                            [ ] interpreter : bughunt po tym jak mateusz zacznie robić swoje
                            
@@ -22,11 +25,12 @@ Marcin :
 Weronika :  
 
                            [ ] obiecałaś dokumentację, przygotuj sobie jakiś wzorzec byś mogła na bierząco pisać  
-                           [ ] plan restauracji wymyśl - Grzegorz siądzie i dorobi assety, tylko chce wiedzieć co robić i na co  
-                           [ ] nazwy potraw
+                           [ ] plan restauracji wymyśl - Grzegorz siądzie i dorobi assety, tylko chce wiedzieć co robić
+                           [X] nazwy potraw
 Mateusz :  
 
                            [ ] zaczepenie skryptu interpretera, żeby Grzegorz mógł tylko funkcję zmieniać  
                            [ ] wrzucenie kilku punktów nawigacji żeby można było chodzić
                            [ ] poprawienie ruchu, żeby kurde nie poklatkowo
                            [ ] kilka agentów
+                           [ ] hud dla zamówień
