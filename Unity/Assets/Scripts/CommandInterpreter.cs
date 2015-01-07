@@ -33,10 +33,10 @@ namespace Assets.Scripts
             List<List<string>> dictionary = new List<List<string>>(interpreter.readFile("słownik.txt"));
             List<List<string>> cookbook = new List<List<string>>(interpreter.readFile("potrawy.txt"));
 
-            List<int> commandTranslation = new List<int>(interpreter.parseInput(lastCommand, dictionary, cookbook));
+            List<int> commandTranslation = new List<int>();
+			commandTranslation = interpreter.parseInput(lastCommand, dictionary, cookbook);
 
             // dodam jeszcze obsługę błędów
-            // do menedżera kelnerów przesyłamy 4krotkę numerKelnera, numerZadania, numerOpcji, numerStolika
         }
 
         void showLastCommand()

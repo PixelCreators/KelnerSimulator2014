@@ -60,7 +60,7 @@ namespace Assets.Scripts
             foreach (List<string> alternatives in dictionary)
             {
                 ++wordType;
-                foreach (string word in dictionary)
+                foreach (string word in alternatives)
                 {
                     if (word == search)
                     {
@@ -71,8 +71,7 @@ namespace Assets.Scripts
             return wordType;
         }
 
-        public static List<int> parseInput(string input, List<List<string>> dictionary,
-            List<List<string>> cookbook)
+        public List<int> parseInput(string input, List<List<string>> dictionary, List<List<string>> cookbook)
         {
 
             List<string> listInput = new List<string>();
@@ -92,15 +91,15 @@ namespace Assets.Scripts
                 string tmpWord = listInput[i];
                 int tmpNumber = -1;
 
-                int wordType = parseDictionary(tmp, tmpDictionary);
+                int wordType = parseDictionary(tmpWord, tmpDictionary);
                 if (wordType == -1)
                 {
 // error NaN - nie ma takiego słowa polecenia
-                    wordType = parseDictionary(tmp, tmpCookbook);
+                    wordType = parseDictionary(tmpWord, tmpCookbook);
                     if (wordType == -1)
                     {
                         //error NaN - nie ma takiej potrawy
-                        if (!int.Parse(tmpWord))
+                        if (!int.TryParse(tmpWord, out tmpNumber))
                         {
                             //error NaN - to nie liczba, syntax error ;D
                             return new List<int>(new int[] {-1, -1, -1, -1});
@@ -119,15 +118,13 @@ namespace Assets.Scripts
                     // można bezpiecznie usunąć słowo z tmpDictionary
                     tmpDictionary.RemoveAt(wordType);
                 }
-                // 0	   1      2      3       4         5      6   7   8     9      10     11    12        13         14
-                // [niech][każdy][każda][kelner][kelnerka][numer][do][od][stół][stołu][zmywa][poda][sprzątnie][odbierze][zamówienie]
                 // słowo istnieje, można tłumaczyć polecenie
                 switch (wordType)
                 {
                     // każdy każda
+                    case 1:
                     case 2:
-                    case 3:
-                        if (listInput[i + 1] == 3 || listInput[i + 1] == 4)
+                        if (listInput[i + 1] == "3" || listInput[i + 1] == "4")
                         {
                             // kelner kelnerka
                             kelner = 0;
@@ -137,22 +134,22 @@ namespace Assets.Scripts
                     // kelner kelnerka
                     case 3:
                     case 4:
-                        if (listInput[i + 1] == 5)
+                        if (listInput[i + 1] == "5")
                         {
                             // numer
-                            kelner = listInput[i + 1];
+							kelner = int.Parse(listInput[i + 1]);
                             listInput.RemoveAt(i + 1);
                         }
                         break;
 
                     // odbierze
                     case 13:
-                        if (listInput[i + 1] == 7 && listInput[i + 2] == 9)
+                        if (listInput[i + 1] == "7" && listInput[i + 2] == "9")
                         {
                             // od stołu
-                            stolik = listInput[i + 3];
+                            stolik = int.Parse(listInput[i + 3]);
 
-                            if (listInput[i + 4] == 14)
+                            if (listInput[i + 4] == "14")
                             {
                                 // zamówienie
                                 zadanie = 0; // odbierz zamówienie
@@ -168,15 +165,15 @@ namespace Assets.Scripts
                         break;
                     // poda do stołu
                     case 11:
-                        if (listInput[i + 1] == 6 && listInput[i + 2] == 9 && listInput[i + 4] == 14)
+                        if (listInput[i + 1] == "6" && listInput[i + 2] == "9" && listInput[i + 4] == "14")
                         {
                             // do stołu _ zamówienie
-                            stolik = listInput[i + 3];
+                            stolik = int.Parse (listInput[i + 3]);
                             zadanie = 1; // podaj zamówienie
-                            if (listInput[i + 5] < 0)
+                            if (int.Parse(listInput[i + 5]) < 0)
                             {
                                 // typ dania jest poprawny
-                                opcja = listInput[i + 5]; // rodzaj zamówienia
+                                opcja = int.Parse (listInput[i + 5]); // rodzaj zamówienia
                                 listInput.RemoveAt(i + 5);
                             }
                             listInput.RemoveRange((i + 1), 4);
@@ -184,9 +181,9 @@ namespace Assets.Scripts
                         break;
                     // sprzątnie stół
                     case 12:
-                        if (listInput[i + 1] == 8)
+                        if (listInput[i + 1] == "8")
                         {
-                            stolik = listInput[i + 2];
+                            stolik = int.Parse(listInput[i + 2]);
                             zadanie = 2;
                             listInput.RemoveRange((i + 1), 2);
                         }
@@ -200,9 +197,9 @@ namespace Assets.Scripts
                         //int i = 1/0;
                         // walimy mocniej
                         break;
-                }
-                return new List<int>(new int[] {kelner, zadanie, opcja, stolik});
+				}
+				}
+			return new List<int>(new int[] {kelner, zadanie, opcja, stolik});
             }
         }
     }
-}
