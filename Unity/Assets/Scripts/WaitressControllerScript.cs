@@ -6,8 +6,8 @@ namespace Assets.Scripts
     public class WaitressControllerScript : MonoBehaviour
     {
         private Rigidbody rigidbodyComponent;
-
-        public float speed ;
+        private Animation animationComponent;
+        public float speed;
         public float rotationSpeed;
 
         public List<Path> avaliblePaths;
@@ -15,12 +15,14 @@ namespace Assets.Scripts
         private float step;
         private float angle;
         private string waitressName;
+        private float currentXRotation = 0;
 
         public Transform currentTargetObject;
 
         void Awake()
         {
             rigidbodyComponent = rigidbody;
+            animationComponent = animation;
         }
 
         void Start()
@@ -36,14 +38,17 @@ namespace Assets.Scripts
     
         public bool moveTowards()
         {
-
             //Zwraca true gdy kelnerka dotrze do docelowego obiektu.
             if (!isPositionEquals())
             {
+                animationComponent.Play("Default Take");
+                currentXRotation = -90.0f;
                 changeObjectRotation();
                 changeObjectPosition();
                 return false;
             }
+            animationComponent.Stop();
+            currentXRotation = 0f;
             return true;
         }
 
@@ -57,7 +62,7 @@ namespace Assets.Scripts
             angle = rotationSpeed * Time.deltaTime;
             rigidbodyComponent.rotation = Quaternion.Slerp(rigidbodyComponent.rotation, Quaternion.LookRotation(currentTargetObject.position - rigidbodyComponent.position), angle);
             Vector3 rotationEuler = rigidbodyComponent.rotation.eulerAngles;
-            rigidbodyComponent.rotation = Quaternion.Euler(0, rotationEuler.y, rotationEuler.z);
+            rigidbodyComponent.rotation = Quaternion.Euler(currentXRotation, rotationEuler.y, rotationEuler.z);
         }
 
         bool isPositionEquals()
