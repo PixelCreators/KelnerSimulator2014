@@ -7,9 +7,8 @@ namespace Assets.Scripts
     {
         private Rigidbody rigidbodyComponent;
 
-
-        public float speed = 1.5f;
-        public float rotationSpeed = 2.0f;
+        public float speed ;
+        public float rotationSpeed;
 
         public List<Path> avaliblePaths;
 
@@ -50,14 +49,15 @@ namespace Assets.Scripts
 
         private void changeObjectPosition()
         {
-            step = speed * Time.deltaTime;
-            rigidbodyComponent.position = Vector3.MoveTowards(rigidbodyComponent.position, currentTargetObject.position, step);
+            rigidbodyComponent.position = Vector3.MoveTowards(rigidbodyComponent.position, currentTargetObject.position, speed * Time.deltaTime);
         }
 
         private void changeObjectRotation()
         {
             angle = rotationSpeed * Time.deltaTime;
             rigidbodyComponent.rotation = Quaternion.Slerp(rigidbodyComponent.rotation, Quaternion.LookRotation(currentTargetObject.position - rigidbodyComponent.position), angle);
+            Vector3 rotationEuler = rigidbodyComponent.rotation.eulerAngles;
+            rigidbodyComponent.rotation = Quaternion.Euler(0, rotationEuler.y, rotationEuler.z);
         }
 
         bool isPositionEquals()
