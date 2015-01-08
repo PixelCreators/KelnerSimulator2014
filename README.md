@@ -18,14 +18,14 @@ Grzegorz :
                            
 Marcin :  
 
-                           [ ] 2d…2d…2d…2d…2d wymyśl sposób żeby rozróżniać stołu, kelnerów i potrawy. Trochę podciągnąć UI pod ascetyczny  
+                           [X] 2d…2d…2d…2d…2d wymyśl sposób żeby rozróżniać stołu, kelnerów i potrawy. Trochę podciągnąć UI pod ascetyczny  
                            [X] słowa do słownika  
                            [ ] pomóc Mateuszowi w czymś… jeśli już masz gita i unity i ugh to wszystko co potrzebne wam do kodowania  
 
 Weronika :  
 
                            [ ] obiecałaś dokumentację, przygotuj sobie jakiś wzorzec byś mogła na bierząco pisać  
-                           [ ] plan restauracji wymyśl - Grzegorz siądzie i dorobi assety, tylko chce wiedzieć co robić
+                           [X] plan restauracji wymyśl - Grzegorz siądzie i dorobi assety, tylko chce wiedzieć co robić
                            [X] nazwy potraw
 Mateusz :  
 
