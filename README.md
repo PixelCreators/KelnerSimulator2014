@@ -1,4 +1,4 @@
-KelnerSimulator2014
+﻿KelnerSimulator2014
 ===================
 
 0. Cokolwiek było wcześniej to był bullshit. Mamy tydzień - pierwszy termin ten czwartek, drugi termin kolejny.
@@ -30,10 +30,11 @@ Weronika :
 Mateusz :  
 
                            [X] zaczepenie skryptu interpretera, żeby Grzegorz mógł tylko funkcję zmieniać  
-                           [ ] wrzucenie kilku punktów nawigacji żeby można było chodzić
-                           [ ] poprawienie ruchu, żeby kurde nie poklatkowo
-                           [ ] kilka agentów
+                           [X] wrzucenie kilku punktów nawigacji żeby można było chodzić
+                           [X] poprawienie ruchu, żeby kurde nie poklatkowo
+                           [X] kilka agentów
                            [ ] hud dla zamówień  
                            [ ] na razie każdy stolik ma generować zamówienia i je odbierać. może być stolik 4 zamawia na stolik 1
                            [ ] BONUS : jak mamy stolik to wyświetl nad nim wykrzyknik że jest zamówienie
                            [ ] BONUS : hud dla stopera który mierzy czas między powstaniem zamówienia / gotowym jedzeniem a wykonaniem zadania 
+

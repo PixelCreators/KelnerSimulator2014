@@ -25,6 +25,7 @@ namespace Assets.Scripts
         private string waitressName;
         private int currentPath = 0;
         private float currentXRotation = 0;
+        private bool moveBack = false;
         int currentPathPoint = 0;
 
         private Transform currentTargetObject;
@@ -37,7 +38,6 @@ namespace Assets.Scripts
 
         private void Start()
         {
-            CurrentState = States.Walking;
         }
 
         private void Update()
@@ -95,16 +95,28 @@ namespace Assets.Scripts
             setCurrentTarget(avaliblePaths[pathNumber].pathPoints[currentPathPoint]);
             if (moveTowards())
             {
-                if (currentPathPoint < avaliblePaths[pathNumber].pathPoints.Count - 1)
+                if (!moveBack && currentPathPoint < avaliblePaths[pathNumber].pathPoints.Count - 1)
                 {
                     currentPathPoint++;
                     Debug.Log(currentPathPoint);
                 }
+                else if (moveBack && currentPathPoint > 0)
+                {
+                    currentPathPoint--;
+                }
                 else
                 {
-                    currentPathPoint = 0;
-                    CurrentState = States.Waiting;
-                    return true;
+                    //currentPathPoint = 0;
+                    if (moveBack)
+                    {
+                        return true;
+                    }
+
+                    if(currentPathPoint == 0)
+                        CurrentState = States.Waiting;
+
+                    if(!moveBack)
+                        moveBack = true;
                 }
             }
             return false;
