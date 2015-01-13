@@ -29,9 +29,15 @@ namespace Assets.Scripts
 
         public void invokeCommand()
         {
+			Debug.Log("debug : new interpreter");
             interpreter = new InterpreterEngine();
+
+			Debug.Log("debug : parse dictionary");
             List<List<string>> dictionary = new List<List<string>>(interpreter.readFile("słownik.txt"));
+
+			Debug.Log("debug : parse cookbook");
             List<List<string>> cookbook = new List<List<string>>(interpreter.readFile("potrawy.txt"));
+
 
             List<int> commandTranslation = new List<int>();
 			commandTranslation = interpreter.parseInput(lastCommand, dictionary, cookbook);
