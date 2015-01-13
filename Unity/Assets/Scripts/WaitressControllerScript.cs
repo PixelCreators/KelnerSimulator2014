@@ -98,7 +98,7 @@ namespace Assets.Scripts
                 if (!moveBack && currentPathPoint < avaliblePaths[pathNumber].pathPoints.Count - 1)
                 {
                     currentPathPoint++;
-                    Debug.Log(currentPathPoint);
+                    //Debug.Log(currentPathPoint);
                 }
                 else if (moveBack && currentPathPoint > 0)
                 {

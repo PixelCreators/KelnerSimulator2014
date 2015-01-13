@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
+    
     public class CommandInterpreter : MonoBehaviour 
     {
         public TextInputFieldScript inputCommandField;
