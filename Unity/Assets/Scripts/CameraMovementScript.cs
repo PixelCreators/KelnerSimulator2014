@@ -21,5 +21,7 @@ public class CameraMovementScript : MonoBehaviour
 
     }
 
-    void move
+    private void move()
+    {
+    }
 }
