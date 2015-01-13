@@ -27,6 +27,7 @@ Marcin :
                            [ ] grafika ui
                            [ ] tekstury
                            [ ] dania jak mają wyglądać, czytelne
+                           [ ] MENU
 
 Weronika :  
 
