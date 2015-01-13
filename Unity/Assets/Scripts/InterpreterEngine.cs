@@ -20,7 +20,7 @@ namespace Assets.Scripts
                 List<string> listAlternatives = inputLine.Split(' ').ToList<string>();
                 listAlternatives.Reverse();
 
-                //obsługa długich wyrażeń
+                /** /obsługa długich wyrażeń
                 for (int i = 0; i < listAlternatives.Count(); i++)
                 {
                     int j = 0;
@@ -44,7 +44,7 @@ namespace Assets.Scripts
                             j = 0;
                         }
                     }
-                }
+                }/**/
 
                 listMain.Add(listAlternatives);
                 listAlternatives = null;
