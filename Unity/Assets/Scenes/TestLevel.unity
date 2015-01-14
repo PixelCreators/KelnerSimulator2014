@@ -1266,6 +1266,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11413642, guid: c8a7650efad131a4c87f5d7fd395c9fa, type: 2}
+      propertyPath: minTimeAftMealSrvd
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413642, guid: c8a7650efad131a4c87f5d7fd395c9fa, type: 2}
+      propertyPath: maxTimeAftMealServ
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8a7650efad131a4c87f5d7fd395c9fa, type: 2}
   m_RootGameObject: {fileID: 1014129580}
@@ -2390,6 +2398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 0
+  maxTimeAftMealServ: 0
 --- !u!1 &362724188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,6 +3203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 0
+  maxTimeAftMealServ: 0
 --- !u!1 &449434914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5042,6 +5054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 0
+  maxTimeAftMealServ: 0
 --- !u!1 &675143912
 GameObject:
   m_ObjectHideFlags: 0
@@ -5133,6 +5147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 0
+  maxTimeAftMealServ: 0
 --- !u!1 &678285145
 GameObject:
   m_ObjectHideFlags: 0
@@ -5252,6 +5268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 0
+  maxTimeAftMealServ: 0
 --- !u!1 &691731419
 GameObject:
   m_ObjectHideFlags: 0
@@ -8097,6 +8115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 3
+  maxTimeAftMealServ: 3
 --- !u!1001 &1014450612
 Prefab:
   m_ObjectHideFlags: 0
@@ -9561,6 +9581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 0
+  maxTimeAftMealServ: 0
 --- !u!1 &1209886147
 GameObject:
   m_ObjectHideFlags: 0
@@ -10786,6 +10808,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 0
+  maxTimeAftMealServ: 0
 --- !u!1001 &1330699408
 Prefab:
   m_ObjectHideFlags: 0
@@ -11280,6 +11304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeAftMealSrvd: 0
+  maxTimeAftMealServ: 0
 --- !u!1 &1365835922
 GameObject:
   m_ObjectHideFlags: 0
