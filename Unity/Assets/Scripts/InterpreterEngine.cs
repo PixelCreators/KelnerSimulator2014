@@ -216,7 +216,7 @@ namespace Assets.Scripts
 				if(listInputParsed[i+2] == -3) {
 					stolik = int.Parse(listInput[i+2]);
 				}
-				else if(listInputParsed[i+2] == 5 && listInputParsed[i+3]) {
+				else if(listInputParsed[i+2] == 5 && listInputParsed[i+3] == -3) {
 					stolik = int.Parse(listInput[i+3]);
 				}
 				else {
