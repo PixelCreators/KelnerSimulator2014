@@ -1,15 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TableScript : MonoBehaviour {
+public class TableScript : MonoBehaviour
+{
+    //Komponenty
+    private Transform transformComponent;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    //Części stolika
+    private GameObject peopleModule;
+    //private GameObject dishesModule; //To be implemented
+
+
+    void Awake()
+    {
+        transformComponent = transform;
+        peopleModule = transformComponent.FindChild("People").gameObject;
+    }
+
+    void Start()
+    {
+        peopleModule.SetActive(false);
+    }
+
+    void Update()
+    {
+
+    }
 }
