@@ -68,138 +68,168 @@ namespace Assets.Scripts
                     }
                 }
             }
-            return wordType;
+            return -1;
         }
 
         public List<int> parseInput(string input, List<List<string>> dictionary, List<List<string>> cookbook)
         {
 
             List<string> listInput = new List<string>();
+			List<int> listInputParsed = new List<int>();
             listInput = input.Split(' ').ToList<string>();
             listInput.Reverse();
 
-            List<List<string>> tmpDictionary = new List<List<string>>(dictionary);
-            List<List<string>> tmpCookbook = new List<List<string>>(cookbook);
-
             int kelner = -1;
             int zadanie = -1;
-            int opcja = -1;
+            int potrawa = -1;
             int stolik = -1;
+			int numer = -1;
 
-            for (int i = 0; i < listInput.Count(); i++)
-            {
-                string tmpWord = listInput[i];
-                int tmpNumber = -1;
+			foreach(string word in listInput) {
+				string current = word;
+				int temp = -1;
+				// sprawdź czy to słowo, czy istnieje w słowniku, czy istnieje w potrawie, czy to liczba. jeśli nie to rzuć błąd -1 -1 -1 -1
 
-                int wordType = parseDictionary(tmpWord, tmpDictionary);
-                if (wordType == -1)
-                {
-// error NaN - nie ma takiego słowa polecenia
-                    wordType = parseDictionary(tmpWord, tmpCookbook);
-                    if (wordType == -1)
-                    {
-                        //error NaN - nie ma takiej potrawy
-                        if (!int.TryParse(tmpWord, out tmpNumber))
-                        {
-                            //error NaN - to nie liczba, syntax error ;D
-                            return new List<int>(new int[] {-1, -1, -1, -1});
-                        }
-                        return new List<int>(new int[] {-1, -1, 0, -1});
-                    }
-                    else
-                    {
-                        // można bezpiecznie usunąć potrawę z tmpCookbook
-                        tmpCookbook.RemoveAt(wordType);
-                        wordType *= -1;
-                    }
-                }
-                else
-                {
-                    // można bezpiecznie usunąć słowo z tmpDictionary
-                    tmpDictionary.RemoveAt(wordType);
-                }
-                // słowo istnieje, można tłumaczyć polecenie
-                switch (wordType)
-                {
-                    // każdy każda
-                    case 1:
-                    case 2:
-                        if (listInput[i + 1] == "3" || listInput[i + 1] == "4")
-                        {
-                            // kelner kelnerka
-                            kelner = 0;
-                            listInput.RemoveAt(i + 1); // szybszy parse, blok kolejnego warunku
-                        }
-                        break;
-                    // kelner kelnerka
-                    case 3:
-                    case 4:
-                        if (listInput[i + 1] == "5")
-                        {
-                            // numer
-							kelner = int.Parse(listInput[i + 1]);
-                            listInput.RemoveAt(i + 1);
-                        }
-                        break;
-
-                    // odbierze
-                    case 13:
-                        if (listInput[i + 1] == "7" && listInput[i + 2] == "9")
-                        {
-                            // od stołu
-                            stolik = int.Parse(listInput[i + 3]);
-
-                            if (listInput[i + 4] == "14")
-                            {
-                                // zamówienie
-                                zadanie = 0; // odbierz zamówienie
-                                listInput.RemoveAt(i + 4);
-                            }
-                            else
-                            {
-                                //listInput to inne słowo bądź nie istnieje
-                                zadanie = 2; // sprzątnij stół
-                            }
-                            listInput.RemoveRange((i + 1), 3);
-                        }
-                        break;
-                    // poda do stołu
-                    case 11:
-                        if (listInput[i + 1] == "6" && listInput[i + 2] == "9" && listInput[i + 4] == "14")
-                        {
-                            // do stołu _ zamówienie
-                            stolik = int.Parse (listInput[i + 3]);
-                            zadanie = 1; // podaj zamówienie
-                            if (int.Parse(listInput[i + 5]) < 0)
-                            {
-                                // typ dania jest poprawny
-                                opcja = int.Parse (listInput[i + 5]); // rodzaj zamówienia
-                                listInput.RemoveAt(i + 5);
-                            }
-                            listInput.RemoveRange((i + 1), 4);
-                        }
-                        break;
-                    // sprzątnie stół
-                    case 12:
-                        if (listInput[i + 1] == "8")
-                        {
-                            stolik = int.Parse(listInput[i + 2]);
-                            zadanie = 2;
-                            listInput.RemoveRange((i + 1), 2);
-                        }
-                        break;
-                    // zmywa
-                    case 10:
-                        zadanie = 3;
-                        break;
-                    default:
-                        // err coś się walnęło 
-                        //int i = 1/0;
-                        // walimy mocniej
-                        break;
+				foreach(List<string> sublist in dictionary) {
+					if(sublist.Contains(current)) {
+						temp = dictionary.IndexOf(sublist);
+					}
 				}
+				if(temp == -1) {
+					foreach(List<string> sublist in cookbook) {
+						if(sublist.Contains(current)) {
+							potrawa = cookbook.IndexOf(sublist);
+							temp = -2;
+						}
+					}
 				}
-			return new List<int>(new int[] {kelner, zadanie, opcja, stolik});
+				if(temp == -1) {
+					if(int.TryParse(current, out numer)) {
+						temp = -3;
+					}
+				}
+				if(temp == -1) {
+					return new List<int>(new int[] {-1, -1, -1, -1});
+				}
+
+				listInputParsed.Add(temp);
+			}
+			listInput.Reverse();
+			listInputParsed.Reverse();
+			int i = 0;
+				// KELNERZY
+				// każdy/a kelner/ka       numer kelnera
+				// 1/2+3/4.    3/4+___.   || 3/4+5+___.
+			// !!! if(listInputParsed[0] == 0) {i++;}
+			if(
+				(listInputParsed[i] == 1 || listInputParsed[i] == 2) &&
+				(listInputParsed[i+1] == 3 || listInputParsed[i+1] == 4)
+				){ // każdy kelner
+				kelner = 0;
+				i = 2;
+			}
+			else if(
+				listInputParsed[i] == 3 || listInputParsed[i] == 4
+				) {
+				if(
+					listInputParsed[i+1] == -3
+				   ) { // kelner #NUMER
+					kelner = int.Parse(listInput[i+1]);
+					i = 2;
+				}
+				else if(
+					listInputParsed[i+1] == 5 &&
+					listInputParsed[i+2] == -3
+					) { // kelner numer #NUMER
+					kelner = int.Parse(listInput[i+2]);
+					i = 3;
+				}
+				else {
+					Debug.Log("ERROR : PARSER : Niejasny wybór kelnera");
+					return new List<int>(new int[] {-1, -1, -1, -1});
+				}
+			}
+				// ZADANIA
+
+				// zmywa 10
+			if(listInputParsed[i] == 10) {
+				zadanie = 3;
+			}
+			else if(listInputParsed[i] == 13 && listInputParsed[i+1] == 14 && listInputParsed[i+2] == 7 && listInputParsed[i+3] == 9) { //odbierze zamówienie od stolika #STOLIK    13+14+7+9+___. || 13+14+7+9+5+___.
+				zadanie = 0;
+				if(listInputParsed[i+4] == -3) {
+					stolik = int.Parse(listInput[i+4]);
+				}
+				else if (listInputParsed[i+4] == 5 && listInputParsed[i+5] == -3) {
+					stolik = int.Parse(listInput[i+5]);
+				}
+				else {
+					Debug.Log("ERROR : PARSER : Nie podano numeru stolika");
+					//return new List<int>(new int[] {-1, -1, -1, -1});
+				}
+			}
+			else if(listInputParsed[i] == 11) { // poda zamówienie #POTRAWA do stolika #STOLIK 11+14+___+6+9+___. || 11+14+___+6+9+5+___.
+				zadanie = 1;
+				if(listInputParsed[i+1] == 14 && listInputParsed[i+2] == -2) {
+					if(listInputParsed[i+3] == 6 && listInputParsed[i+4] == 9) {
+						if(listInputParsed[i+5] == -3) {
+							stolik = int.Parse(listInput[i+5]);
+						}
+						else if(listInputParsed[i+5] == 5 && listInputParsed[i+6] == -3) {
+							stolik = int.Parse(listInput[i+6]);
+						}
+						else {
+							Debug.Log("ERROR : PARSER : Nie podano numeru stolika");
+							//return new List<int>(new int[] {-1, -1, -1, -1});
+						}
+					}
+					else {
+						Debug.Log("ERROR : PARSER : Polecenie bez końca:zamówienie");
+						//return new List<int>(new int[] {-1, -1, -1, -1});
+					}
+				}
+				if(listInputParsed[i+1] == -2) {
+					if(listInputParsed[i+2] == 6 && listInputParsed[i+3] == 9) {
+						if(listInputParsed[i+4] == -3) {
+							stolik = int.Parse(listInput[i+4]);
+						}
+						else if(listInputParsed[i+4] == 5 && listInputParsed[i+5] == -3) {
+							stolik = int.Parse(listInput[i+5]);
+						}
+						else {
+							Debug.Log("ERROR : PARSER : Nie podano numeru stolika");
+							//return new List<int>(new int[] {-1, -1, -1, -1});
+						}
+					}
+					else {
+						Debug.Log("ERROR : PARSER : Polecenie bez końca:zamówienie");
+						//return new List<int>(new int[] {-1, -1, -1, -1});
+					}
+				}
+				else {
+					Debug.Log("ERROR : PARSER : Nie podano potrawy");
+					//return new List<int>(new int[] {-1, -1, -1, -1});
+				}
+			}
+			else if(listInputParsed[i] == 12 && listInputParsed[i+1] == 8) { // sprzątnie stolik #STOLIK 12+8+___. || 12+8+5+___.
+				zadanie = 2;
+				if(listInputParsed[i+2] == -3) {
+					stolik = int.Parse(listInput[i+2]);
+				}
+				else if(listInputParsed[i+2] == 5 && listInputParsed[i+3]) {
+					stolik = int.Parse(listInput[i+3]);
+				}
+				else {
+					Debug.Log("ERROR : PARSER : Nie podano numeru stolika");
+					//return new List<int>(new int[] {-1, -1, -1, -1});
+				}
+			}
+			else {
+				Debug.Log("ERROR : PARSER : Polecenie bez końca:treść polecenia niepełna");
+				//return new List<int>(new int[] {-1, -1, -1, -1});
+			}
+			Debug.Log("kelner " + kelner + "  zadanie " + zadanie + "  potrawa " + potrawa + "  stolik " + stolik);
+			return new List<int>(new int[] {kelner, zadanie, potrawa, stolik});
             }
         }
     }
