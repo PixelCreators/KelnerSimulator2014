@@ -42,7 +42,6 @@ GameObject:
   - 111: {fileID: 11182206}
   - 114: {fileID: 11482206}
   - 54: {fileID: 5482206}
-  - 136: {fileID: 13682206}
   m_Layer: 0
   m_Name: kelnerka
   m_TagString: Untagged
@@ -442,8 +441,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182158}
-  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: .5, y: -.5, z: -.5, w: -.5}
+  m_LocalPosition: {x: -15, y: 0, z: 5}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 482178}
@@ -803,23 +802,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888f8c4e5ce3e43408397d1d02aed17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentState: 0
   speed: 3
   rotationSpeed: 2
-  avaliblePaths: []
-  currentTargetObject: {fileID: 0}
---- !u!136 &13682206
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182158}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: .119371697
-  m_Height: .54214853
-  m_Direction: 1
-  m_Center: {x: 0, y: .289999992, z: 0}
+  avaliblePaths:
+  - pathPoints:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    PathName: 
 --- !u!137 &13782206
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
