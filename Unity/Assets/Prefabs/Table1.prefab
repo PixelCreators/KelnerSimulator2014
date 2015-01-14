@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &116814
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf4c12f45d1b334bae5857d731a581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinTimeBtwStateChanges: 3
+  MaxTimeBtwStateChanges: 3
+  orderName: 0
+  state: 0
+  status: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
