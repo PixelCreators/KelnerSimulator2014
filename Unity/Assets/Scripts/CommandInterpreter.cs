@@ -30,7 +30,7 @@ namespace Assets.Scripts
 
         public void invokeCommand()
         {
-			/*Debug.Log("debug : new interpreter");
+			Debug.Log("debug : new interpreter");
             interpreter = new InterpreterEngine();
 
 			Debug.Log("debug : parse dictionary");
@@ -41,7 +41,7 @@ namespace Assets.Scripts
 
 
             List<int> commandTranslation = new List<int>();
-			commandTranslation = interpreter.parseInput(lastCommand, dictionary, cookbook);*/
+			commandTranslation = interpreter.parseInput(lastCommand, dictionary, cookbook);
 
             // dodam jeszcze obsługę błędów
         }
