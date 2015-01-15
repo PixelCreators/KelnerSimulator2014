@@ -5,35 +5,47 @@ namespace Assets.Scripts
 {
     public class WaitressControllerScript : MonoBehaviour
     {
-        public enum States
+        private enum States
         {
             Waiting,
             Walking,
+            GettingOrder,
+            Serving,
+            Cleaning,
+            Washing,
         }
 
-        public States CurrentState = States.Waiting;
+        [SerializeField]
+        private States CurrentState = States.Waiting;
 
-        private Rigidbody rigidbodyComponent;
-        private Animation animationComponent;
+        //Zmienne publiczne
         public float speed;
         public float rotationSpeed;
-
         public List<Path> avaliblePaths;
 
+        //Komponenty
+        private Rigidbody rigidbodyComponent;
+        private Animation animationComponent;
+        private Transform currentTargetObject;
+
+        //Zmienne prywatne
         private float step;
         private float angle;
         private string waitressName;
-        private int currentPath = 0;
-        private float currentXRotation = 0;
-        private bool moveBack = false;
-        int currentPathPoint = 0;
-
-        private Transform currentTargetObject;
+        private int currentPath;
+        private float currentXRotation;
+        private bool moveBack;
+        private int currentPathPoint;
 
         private void Awake()
         {
             rigidbodyComponent = rigidbody;
             animationComponent = animation;
+
+            currentPath = 0;
+            currentXRotation = 0;
+            currentPathPoint = 0;
+            moveBack = false;
         }
 
         private void Start()

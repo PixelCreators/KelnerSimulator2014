@@ -112,7 +112,7 @@ public class TableScript : MonoBehaviour
                 case TableState.Busy:
                     //TODO: pomyśleć jak wyrzucić to do osobnej funkcji.
 
-
+                    //TODO: Zmienić stałe na losowe w ostatecznej wersji. Do debbugingu lepsze stałe czasy jednak.
                     if (status == TableStatus.Clean)
                     {
                         yield return new WaitForSeconds(3f);
