@@ -55,7 +55,6 @@ namespace Assets.Scripts
 
         private void Update()
         {
-            //moveTowards();
             if(CurrentState == States.Walking)
                 walkAlongPath(currentPath);
         }
@@ -106,6 +105,7 @@ namespace Assets.Scripts
             currentTargetObject = newTarget;
         }
 
+
         //TODO: Dodać wybieranie ścieżki po jej nazwie. 
         private bool walkAlongPath(int pathNumber)
         {
@@ -130,8 +130,8 @@ namespace Assets.Scripts
                     if(currentPathPoint == 0)
                         CurrentState = States.Waiting;
 
-                    if(!moveBack)
-                        moveBack = true;
+                    //if(!moveBack)
+                    //    moveBack = true;
                 }
             }
             return false;
