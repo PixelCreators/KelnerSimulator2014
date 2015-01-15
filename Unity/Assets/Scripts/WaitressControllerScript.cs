@@ -136,5 +136,10 @@ namespace Assets.Scripts
             }
             return false;
         }
+
+        void OnTriggerEnter()
+        {
+            Debug.Log("Trigger");
+        }
     }
 }
