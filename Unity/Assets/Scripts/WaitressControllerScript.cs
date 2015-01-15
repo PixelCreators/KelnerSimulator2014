@@ -39,10 +39,9 @@ namespace Assets.Scripts
         [SerializeField]
         private List<TableScript> tables; 
             
-        [SerializeField] 
-        private int currentTable;
-        [SerializeField]
-        private int carryingMeal;
+        public int currentTable { get; set; }
+        public int carryingMeal { get; set; }
+        public int invokeFunction { get; set; }
 
         private void Awake()
         {

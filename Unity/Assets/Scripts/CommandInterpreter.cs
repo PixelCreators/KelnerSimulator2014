@@ -7,6 +7,16 @@ namespace Assets.Scripts
     
     public class CommandInterpreter : MonoBehaviour 
     {
+        enum WaitresesNames
+        {
+            None,
+            Patrycja,
+            Doris,
+            Marlenka,
+            Fiona
+
+        }
+
         public TextInputFieldScript inputCommandField;
 
         public Text lastCommandText;
@@ -16,12 +26,20 @@ namespace Assets.Scripts
         private List<List<string>> cookbook;
         public int CookbookSize = 0;
 
+        [SerializeField] 
+        private List<WaitressControllerScript> waitreses; 
+
         private string lastCommand;
 
         void Awake()
         {
             inputCommandField = GameObject.Find("InputCommandFieldText").GetComponent<TextInputFieldScript>();
             lastCommandText = GameObject.Find("LastCommand").GetComponent<Text>();
+        
+            waitreses.Add(GameObject.Find("Patrycja").GetComponent<WaitressControllerScript>());
+            waitreses.Add(GameObject.Find("Doris").GetComponent<WaitressControllerScript>());
+            waitreses.Add(GameObject.Find("Marlenka").GetComponent<WaitressControllerScript>());
+            waitreses.Add(GameObject.Find("Fiona").GetComponent<WaitressControllerScript>());
         }
 
         void Start()
@@ -50,10 +68,32 @@ namespace Assets.Scripts
             List<int> commandTranslation = new List<int>();
 			commandTranslation = interpreter.parseInput(lastCommand, dictionary, cookbook);
 
+            switch (getNameFromInt(commandTranslation[0]))
+            {
+                case WaitresesNames.Patrycja:
+                    sendCommandData(0, commandTranslation);
+                    break;
+                case WaitresesNames.Doris:
+                    sendCommandData(1, commandTranslation);
+                    break;
+                case WaitresesNames.Marlenka:
+                    sendCommandData(2, commandTranslation);
+                    break;
+                case WaitresesNames.Fiona:
+                    sendCommandData(3, commandTranslation);
+                    break;
+            }
             // dodam jeszcze obsługę błędów
         }
 
-        void showLastCommand()
+        void sendCommandData(int waitId, List<int> commandTranslation )
+        {
+            waitreses[waitId].invokeFunction = commandTranslation[2];
+            waitreses[waitId].carryingMeal = commandTranslation[3];
+            waitreses[waitId].currentTable = commandTranslation[4];
+        }
+
+       void showLastCommand()
         {
             lastCommandText.text = lastCommand;
         }
@@ -61,6 +101,25 @@ namespace Assets.Scripts
         void getCommandFromInput()
         {
             lastCommand = inputCommandField.getCommandFromInput();
+        }
+
+        WaitresesNames getNameFromInt(int number)
+        {
+            switch (number)
+            {
+                case 1:
+                    return WaitresesNames.Patrycja;
+                case 2:
+                    return WaitresesNames.Doris;
+                case 3:
+                    return WaitresesNames.Marlenka;
+                case 4:
+                    return WaitresesNames.Fiona;
+                default:
+                    Debug.Log("There's no such waitress!");
+                    break;
+            }
+            return WaitresesNames.None;
         }
     }
 }
