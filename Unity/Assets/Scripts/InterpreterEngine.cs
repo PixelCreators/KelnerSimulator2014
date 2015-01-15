@@ -185,7 +185,7 @@ namespace Assets.Scripts
 					}
 					else {
 						Debug.Log("ERROR : PARSER : Polecenie bez końca:zamówienie");
-						//return new List<int>(new int[] {-1, -1, -1, -1});
+						//return new List<int>(new int[] {-1, -1, -1, -1});s
 					}
 				}
 				if(listInputParsed[i+1] == -2) {
