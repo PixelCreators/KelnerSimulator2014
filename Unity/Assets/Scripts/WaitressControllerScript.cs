@@ -29,8 +29,8 @@ namespace Assets.Scripts
         private Transform currentTargetObject;
 
         //Zmienne prywatne
-        private float step;
         private float angle;
+        [SerializeField]
         private string waitressName;
         private int currentPath;
         private float currentXRotation;
@@ -46,6 +46,7 @@ namespace Assets.Scripts
             currentXRotation = 0;
             currentPathPoint = 0;
             moveBack = false;
+            waitressName = gameObject.name;
         }
 
         private void Start()
@@ -85,8 +86,12 @@ namespace Assets.Scripts
         private void changeObjectRotation()
         {
             angle = rotationSpeed*Time.deltaTime;
-            rigidbodyComponent.rotation = Quaternion.Slerp(rigidbodyComponent.rotation,
-                Quaternion.LookRotation(currentTargetObject.position - rigidbodyComponent.position), angle);
+
+            rigidbodyComponent.rotation = Quaternion.Slerp(
+                rigidbodyComponent.rotation,
+                Quaternion.LookRotation(currentTargetObject.position - rigidbodyComponent.position), 
+                angle);
+
             Vector3 rotationEuler = rigidbodyComponent.rotation.eulerAngles;
             rigidbodyComponent.rotation = Quaternion.Euler(currentXRotation, rotationEuler.y, rotationEuler.z);
         }
@@ -110,7 +115,6 @@ namespace Assets.Scripts
                 if (!moveBack && currentPathPoint < avaliblePaths[pathNumber].pathPoints.Count - 1)
                 {
                     currentPathPoint++;
-                    //Debug.Log(currentPathPoint);
                 }
                 else if (moveBack && currentPathPoint > 0)
                 {
@@ -118,7 +122,6 @@ namespace Assets.Scripts
                 }
                 else
                 {
-                    //currentPathPoint = 0;
                     if (moveBack)
                     {
                         return true;
