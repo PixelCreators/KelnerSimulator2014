@@ -137,9 +137,9 @@ namespace Assets.Scripts
             return false;
         }
 
-        void OnTriggerEnter()
+        void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Trigger");
+            Debug.Log(other.gameObject.name);
         }
     }
 }
