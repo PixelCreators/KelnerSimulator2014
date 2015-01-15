@@ -150,7 +150,8 @@ namespace Assets.Scripts
 
         void OnTriggerEnter(Collider other)
         {
-            Debug.Log(other.gameObject.name);
+            if(currentTable.ToString().Equals((other.gameObject.name)))
+                Debug.Log("Dotarlem do stolika!");
         }
     }
 }

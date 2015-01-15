@@ -4399,6 +4399,7 @@ MonoBehaviour:
     - {fileID: 137402537}
     PathName: 
   waitressName: 
+  tables: []
 --- !u!54 &588435653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6105,6 +6106,7 @@ MonoBehaviour:
     - {fileID: 781923156}
     PathName: 
   waitressName: 
+  tables: []
 --- !u!136 &770793443
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9963,6 +9965,7 @@ MonoBehaviour:
     - {fileID: 1913211630}
     PathName: 
   waitressName: 
+  tables: []
 --- !u!54 &1228508118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12237,6 +12240,7 @@ MonoBehaviour:
     - {fileID: 1551458687}
     PathName: 
   waitressName: 
+  tables: []
 --- !u!136 &1443575719
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13330,7 +13334,107 @@ MonoBehaviour:
     - {fileID: 2094884670}
     - {fileID: 1551458687}
     PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
+  - pathPoints:
+    - {fileID: 1246418235}
+    - {fileID: 1833116560}
+    - {fileID: 1995440768}
+    - {fileID: 244170232}
+    - {fileID: 2007892265}
+    - {fileID: 1970716142}
+    - {fileID: 1696418146}
+    - {fileID: 2094884670}
+    - {fileID: 1551458687}
+    PathName: 
   waitressName: 
+  tables: []
 --- !u!54 &1543854140
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14382,6 +14486,7 @@ MonoBehaviour:
   inputCommandField: {fileID: 0}
   lastCommandText: {fileID: 0}
   CookbookSize: 0
+  waitreses: []
 --- !u!4 &1701714780
 Transform:
   m_ObjectHideFlags: 0
@@ -14581,6 +14686,7 @@ MonoBehaviour:
     - {fileID: 137402537}
     PathName: Sciezka
   waitressName: 
+  tables: []
 --- !u!136 &1728374467
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16323,6 +16429,7 @@ MonoBehaviour:
     - {fileID: 1913211630}
     PathName: 
   waitressName: 
+  tables: []
 --- !u!136 &1867713923
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16775,6 +16882,7 @@ MonoBehaviour:
     - {fileID: 781923156}
     PathName: 
   waitressName: 
+  tables: []
 --- !u!54 &1913510710
 Rigidbody:
   m_ObjectHideFlags: 0
