@@ -36,12 +36,24 @@ namespace Assets.Scripts
         private float currentXRotation;
         private bool moveBack;
         private int currentPathPoint;
+        [SerializeField]
+        private List<TableScript> tables; 
+            
+        [SerializeField] 
+        private int currentTable;
+        [SerializeField]
+        private int carryingMeal;
 
         private void Awake()
         {
+            tables.Add(null);       //Brzydkie, ale nie chcialem juz zmieniac kolejnosci stolikow. TODO: Poprawic! 
+            for(int i = 1; i <= 9; i++)
+                tables.Add(GameObject.Find(i.ToString()).GetComponent<TableScript>());
+
+
             rigidbodyComponent = rigidbody;
             animationComponent = animation;
-
+            
             currentPath = 0;
             currentXRotation = 0;
             currentPathPoint = 0;
