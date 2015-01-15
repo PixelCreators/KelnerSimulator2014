@@ -117,6 +117,11 @@ namespace Assets.Scripts
 			listInput.Reverse();
 			listInputParsed.Reverse();
 			int i = 0;
+			if(
+				listInputParsed[0] == 0
+				){ // niech
+				i += 1;
+			}
 				// KELNERZY
 				// każdy/a kelner/ka       numer kelnera
 				// 1/2+3/4.    3/4+___.   || 3/4+5+___.
@@ -126,7 +131,7 @@ namespace Assets.Scripts
 				(listInputParsed[i+1] == 3 || listInputParsed[i+1] == 4)
 				){ // każdy kelner
 				kelner = 0;
-				i = 2;
+				i += 2;
 			}
 			else if(
 				listInputParsed[i] == 3 || listInputParsed[i] == 4
@@ -135,14 +140,14 @@ namespace Assets.Scripts
 					listInputParsed[i+1] == -3
 				   ) { // kelner #NUMER
 					kelner = int.Parse(listInput[i+1]);
-					i = 2;
+					i += 2;
 				}
 				else if(
 					listInputParsed[i+1] == 5 &&
 					listInputParsed[i+2] == -3
 					) { // kelner numer #NUMER
 					kelner = int.Parse(listInput[i+2]);
-					i = 3;
+					i += 3;
 				}
 				else {
 					Debug.Log("ERROR : PARSER : Niejasny wybór kelnera");
@@ -216,7 +221,7 @@ namespace Assets.Scripts
 				if(listInputParsed[i+2] == -3) {
 					stolik = int.Parse(listInput[i+2]);
 				}
-				else if(listInputParsed[i+2] == 5 && listInputParsed[i+3] == -3) {
+				else if(listInputParsed[i+2] == 5 && listInputParsed[i+3] == -1) {
 					stolik = int.Parse(listInput[i+3]);
 				}
 				else {
