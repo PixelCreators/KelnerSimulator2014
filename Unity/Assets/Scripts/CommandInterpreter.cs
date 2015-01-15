@@ -67,7 +67,7 @@ namespace Assets.Scripts
         {
             List<int> commandTranslation = new List<int>();
 			commandTranslation = interpreter.parseInput(lastCommand, dictionary, cookbook);
-
+            /*
             switch (getNameFromInt(commandTranslation[0]))
             {
                 case WaitresesNames.Patrycja:
@@ -82,7 +82,7 @@ namespace Assets.Scripts
                 case WaitresesNames.Fiona:
                     sendCommandData(3, commandTranslation);
                     break;
-            }
+            }*/
             // dodam jeszcze obsługę błędów
         }
 

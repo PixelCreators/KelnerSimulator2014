@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -37,11 +38,15 @@ namespace Assets.Scripts
         private bool moveBack;
         private int currentPathPoint;
         [SerializeField]
-        private List<TableScript> tables; 
-            
-        public int currentTable { get; set; }
-        public int carryingMeal { get; set; }
-        public int invokeFunction { get; set; }
+        private List<TableScript> tables;
+        private bool onPosition;
+        private bool commandProceed;
+
+        [SerializeField] 
+        public int currentTable;
+        public int carryingMeal;
+        public int invokeFunction;
+        public bool doingSomething;
 
         private void Awake()
         {
@@ -57,19 +62,94 @@ namespace Assets.Scripts
             currentXRotation = 0;
             currentPathPoint = 0;
             moveBack = false;
+            onPosition = false;
+            commandProceed = false;
             waitressName = gameObject.name;
         }
 
         private void Start()
         {
+            StartCoroutine(UpdateStatus());
         }
 
         private void Update()
         {
             if(CurrentState == States.Walking)
-                walkAlongPath(currentPath);
+                walkAlongPath(0);
         }
 
+        IEnumerator UpdateStatus()
+        {
+            for (;;)
+            {
+                switch (CurrentState)
+                {
+                        case States.Waiting:
+                            getCommand();
+                            break;
+                        case States.Walking:
+                            if (onPosition && !commandProceed)
+                            {
+                                switch (invokeFunction)
+                                {
+                                    /*
+                                     * Funkcje, na razie tak działają, nie mogłem się dobrać do interpretera.
+                                     * 
+                                     *  1 - odbierze
+                                     *  2 - poda
+                                     *  3 - sprzątnie
+                                     */
+                                    case 1:
+                                        CurrentState = States.GettingOrder;
+                                        aquireOrder();
+                                        yield return new WaitForSeconds(3f);
+                                        CurrentState = States.Walking;
+                                        break;
+                                    case 2:
+                                        CurrentState = States.GettingOrder;
+                                        serveOrder();
+                                        yield return new WaitForSeconds(3f);
+                                        CurrentState = States.Walking;
+                                        break;
+                                    case 3:
+                                        CurrentState = States.GettingOrder;
+                                        cleanTable();
+                                        yield return new WaitForSeconds(3f);
+                                        CurrentState = States.Walking;
+                                        break;
+                                }
+                            }
+                        break;
+                }
+                yield return new WaitForSeconds(.1f);
+            }
+        }
+
+        private void getCommand()
+        {
+            if (doingSomething)
+            {
+                CurrentState = States.Walking;
+            }
+        }
+
+        void aquireOrder()
+        {
+            tables[currentTable].AquireOrder();
+            commandProceed = true;
+        }
+
+        void serveOrder()
+        {
+            tables[currentTable].ServeOrder();
+            commandProceed = true;
+        }
+
+        void cleanTable()
+        {
+            tables[currentTable].CleanTable();
+            commandProceed = true;
+        }
 
         public bool moveTowards()
         {
@@ -133,16 +213,20 @@ namespace Assets.Scripts
                 }
                 else
                 {
-                    if (moveBack)
+                    if (moveBack && currentPathPoint == 0)
                     {
+                        CurrentState = States.Waiting;
+                        doingSomething = false;
+                        commandProceed = false;
+                        moveBack = false;
+                        onPosition = false;
                         return true;
                     }
 
-                    if(currentPathPoint == 0)
-                        CurrentState = States.Waiting;
 
-                    //if(!moveBack)
-                    //    moveBack = true;
+
+                    if(!moveBack)
+                        moveBack = true;
                 }
             }
             return false;
@@ -150,8 +234,9 @@ namespace Assets.Scripts
 
         void OnTriggerEnter(Collider other)
         {
-            if(currentTable.ToString().Equals((other.gameObject.name)))
-                Debug.Log("Dotarlem do stolika!");
+            if (currentTable.ToString().Equals((other.gameObject.name)))
+                onPosition = true;
         }
+
     }
 }

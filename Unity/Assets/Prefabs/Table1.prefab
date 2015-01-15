@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinTimeBtwStateChanges: 3
-  MaxTimeBtwStateChanges: 100
+  MaxTimeBtwStateChanges: 3
   orderName: 0
   state: 0
   status: 5
