@@ -1,52 +1,155 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
     public class WaitressControllerScript : MonoBehaviour
     {
-        public enum States
+        private enum States
         {
             Waiting,
             Walking,
+            GettingOrder,
+            Serving,
+            Cleaning,
+            Washing,
         }
 
-        public States CurrentState = States.Waiting;
+        [SerializeField]
+        private States CurrentState = States.Waiting;
 
-        private Rigidbody rigidbodyComponent;
-        private Animation animationComponent;
+        //Zmienne publiczne
         public float speed;
         public float rotationSpeed;
-
         public List<Path> avaliblePaths;
 
-        private float step;
-        private float angle;
-        private string waitressName;
-        private int currentPath = 0;
-        private float currentXRotation = 0;
-        private bool moveBack = false;
-        int currentPathPoint = 0;
-
+        //Komponenty
+        private Rigidbody rigidbodyComponent;
+        private Animation animationComponent;
         private Transform currentTargetObject;
+
+        //Zmienne prywatne
+        private float angle;
+        [SerializeField]
+        private string waitressName;
+        private int currentPath;
+        private float currentXRotation;
+        private bool moveBack;
+        private int currentPathPoint;
+        [SerializeField]
+        private List<TableScript> tables;
+        private bool onPosition;
+        private bool commandProceed;
+
+        [SerializeField] 
+        public int currentTable;
+        public int carryingMeal;
+        public int invokeFunction;
+        public bool doingSomething;
 
         private void Awake()
         {
+            tables.Add(null);       //Brzydkie, ale nie chcialem juz zmieniac kolejnosci stolikow. TODO: Poprawic! 
+            for(int i = 1; i <= 9; i++)
+                tables.Add(GameObject.Find(i.ToString()).GetComponent<TableScript>());
+
+
             rigidbodyComponent = rigidbody;
             animationComponent = animation;
+            
+            currentPath = 0;
+            currentXRotation = 0;
+            currentPathPoint = 0;
+            moveBack = false;
+            onPosition = false;
+            commandProceed = false;
+            waitressName = gameObject.name;
         }
 
         private void Start()
         {
+            StartCoroutine(UpdateStatus());
         }
 
         private void Update()
         {
-            //moveTowards();
             if(CurrentState == States.Walking)
-                walkAlongPath(currentPath);
+                walkAlongPath(0);
         }
 
+        IEnumerator UpdateStatus()
+        {
+            for (;;)
+            {
+                switch (CurrentState)
+                {
+                        case States.Waiting:
+                            getCommand();
+                            break;
+                        case States.Walking:
+                            if (onPosition && !commandProceed)
+                            {
+                                switch (invokeFunction)
+                                {
+                                    /*
+                                     * Funkcje, na razie tak działają, nie mogłem się dobrać do interpretera.
+                                     * 
+                                     *  1 - odbierze
+                                     *  2 - poda
+                                     *  3 - sprzątnie
+                                     */
+                                    case 1:
+                                        CurrentState = States.GettingOrder;
+                                        aquireOrder();
+                                        yield return new WaitForSeconds(3f);
+                                        CurrentState = States.Walking;
+                                        break;
+                                    case 2:
+                                        CurrentState = States.GettingOrder;
+                                        serveOrder();
+                                        yield return new WaitForSeconds(3f);
+                                        CurrentState = States.Walking;
+                                        break;
+                                    case 3:
+                                        CurrentState = States.GettingOrder;
+                                        cleanTable();
+                                        yield return new WaitForSeconds(3f);
+                                        CurrentState = States.Walking;
+                                        break;
+                                }
+                            }
+                        break;
+                }
+                yield return new WaitForSeconds(.1f);
+            }
+        }
+
+        private void getCommand()
+        {
+            if (doingSomething)
+            {
+                CurrentState = States.Walking;
+            }
+        }
+
+        void aquireOrder()
+        {
+            tables[currentTable].AquireOrder();
+            commandProceed = true;
+        }
+
+        void serveOrder()
+        {
+            tables[currentTable].ServeOrder();
+            commandProceed = true;
+        }
+
+        void cleanTable()
+        {
+            tables[currentTable].CleanTable();
+            commandProceed = true;
+        }
 
         public bool moveTowards()
         {
@@ -73,8 +176,12 @@ namespace Assets.Scripts
         private void changeObjectRotation()
         {
             angle = rotationSpeed*Time.deltaTime;
-            rigidbodyComponent.rotation = Quaternion.Slerp(rigidbodyComponent.rotation,
-                Quaternion.LookRotation(currentTargetObject.position - rigidbodyComponent.position), angle);
+
+            rigidbodyComponent.rotation = Quaternion.Slerp(
+                rigidbodyComponent.rotation,
+                Quaternion.LookRotation(currentTargetObject.position - rigidbodyComponent.position), 
+                angle);
+
             Vector3 rotationEuler = rigidbodyComponent.rotation.eulerAngles;
             rigidbodyComponent.rotation = Quaternion.Euler(currentXRotation, rotationEuler.y, rotationEuler.z);
         }
@@ -89,6 +196,7 @@ namespace Assets.Scripts
             currentTargetObject = newTarget;
         }
 
+
         //TODO: Dodać wybieranie ścieżki po jej nazwie. 
         private bool walkAlongPath(int pathNumber)
         {
@@ -98,7 +206,6 @@ namespace Assets.Scripts
                 if (!moveBack && currentPathPoint < avaliblePaths[pathNumber].pathPoints.Count - 1)
                 {
                     currentPathPoint++;
-                    //Debug.Log(currentPathPoint);
                 }
                 else if (moveBack && currentPathPoint > 0)
                 {
@@ -106,14 +213,17 @@ namespace Assets.Scripts
                 }
                 else
                 {
-                    //currentPathPoint = 0;
-                    if (moveBack)
+                    if (moveBack && currentPathPoint == 0)
                     {
+                        CurrentState = States.Waiting;
+                        doingSomething = false;
+                        commandProceed = false;
+                        moveBack = false;
+                        onPosition = false;
                         return true;
                     }
 
-                    if(currentPathPoint == 0)
-                        CurrentState = States.Waiting;
+
 
                     if(!moveBack)
                         moveBack = true;
@@ -121,5 +231,12 @@ namespace Assets.Scripts
             }
             return false;
         }
+
+        void OnTriggerEnter(Collider other)
+        {
+            if (currentTable.ToString().Equals((other.gameObject.name)))
+                onPosition = true;
+        }
+
     }
 }
