@@ -33,4 +33,9 @@ public class MenuScript : MonoBehaviour {
     {
         Application.LoadLevel("Menu");
     }
+
+    public void MenuButton()
+    {
+        Application.LoadLevel("Menu");
+    }
 }
