@@ -75,7 +75,7 @@ namespace Assets.Scripts
         private void Update()
         {
             if(CurrentState == States.Walking)
-                walkAlongPath(0);
+                walkAlongPath(currentTable);
         }
 
         IEnumerator UpdateStatus()

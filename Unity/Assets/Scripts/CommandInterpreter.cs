@@ -27,7 +27,7 @@ namespace Assets.Scripts
         public int CookbookSize = 0;
 
         [SerializeField] 
-        private List<WaitressControllerScript> waitreses; 
+        public WaitressControllerScript[] waitresses; 
 
         private string lastCommand;
 
@@ -36,10 +36,6 @@ namespace Assets.Scripts
             inputCommandField = GameObject.Find("InputCommandFieldText").GetComponent<TextInputFieldScript>();
             lastCommandText = GameObject.Find("LastCommand").GetComponent<Text>();
         
-            waitreses.Add(GameObject.Find("Patrycja").GetComponent<WaitressControllerScript>());
-            waitreses.Add(GameObject.Find("Doris").GetComponent<WaitressControllerScript>());
-            waitreses.Add(GameObject.Find("Marlenka").GetComponent<WaitressControllerScript>());
-            waitreses.Add(GameObject.Find("Fiona").GetComponent<WaitressControllerScript>());
         }
 
         void Start()
@@ -68,29 +64,29 @@ namespace Assets.Scripts
             List<int> commandTranslation = new List<int>();
 			commandTranslation = interpreter.parseInput(lastCommand, dictionary, cookbook);
             
-            switch (getNameFromInt(commandTranslation[0]))
+            switch (commandTranslation[0])
             {
-                case WaitresesNames.Patrycja:
+                case 1:
                     sendCommandData(0, commandTranslation);
                     break;
-                case WaitresesNames.Doris:
+                case 2:
                     sendCommandData(1, commandTranslation);
                     break;
-                case WaitresesNames.Marlenka:
+                case 3:
                     sendCommandData(2, commandTranslation);
                     break;
-                case WaitresesNames.Fiona:
+                case 4:
                     sendCommandData(3, commandTranslation);
                     break;
             }
-            // dodam jeszcze obsługę błędów
         }
 
         void sendCommandData(int waitId, List<int> commandTranslation )
         {
-            waitreses[waitId].invokeFunction = commandTranslation[2];
-            waitreses[waitId].carryingMeal = commandTranslation[3];
-            waitreses[waitId].currentTable = commandTranslation[4];
+            waitresses[waitId].doingSomething = true;
+            waitresses[waitId].invokeFunction = commandTranslation[1];
+            waitresses[waitId].carryingMeal = commandTranslation[2];
+            waitresses[waitId].currentTable = commandTranslation[3] + 1;
         }
 
        void showLastCommand()
@@ -101,25 +97,6 @@ namespace Assets.Scripts
         void getCommandFromInput()
         {
             lastCommand = inputCommandField.getCommandFromInput();
-        }
-
-        WaitresesNames getNameFromInt(int number)
-        {
-            switch (number)
-            {
-                case 1:
-                    return WaitresesNames.Patrycja;
-                case 2:
-                    return WaitresesNames.Doris;
-                case 3:
-                    return WaitresesNames.Marlenka;
-                case 4:
-                    return WaitresesNames.Fiona;
-                default:
-                    Debug.Log("There's no such waitress!");
-                    break;
-            }
-            return WaitresesNames.None;
         }
     }
 }
