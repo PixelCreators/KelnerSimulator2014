@@ -1,0 +1,638 @@
+Initialize engine version: 4.6.1f1 (d1db7a1b5196)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7970M (ID=0x6800)
+    Vendor:   ATI
+    VRAM:     2029 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.205 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Managed\System.dll (this message is harmless)
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1788)
+
+UnloadTime: 17.364946 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 2379.
+Total: 3.616395 ms (FindLiveObjects: 0.334488 ms CreateObjectMapping: 0.049916 ms MarkObjects: 1.181673 ms  DeleteObjects: 0.025658 ms)
+
+IsolatedStorageException: Could not find file "C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Paths_Doris.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.AddPaths.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IsolatedStorageException: Could not find file "C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Paths_Marlenka.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.AddPaths.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IsolatedStorageException: Could not find file "C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Paths_Patrycja.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.AddPaths.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+debug : new interpreter
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+debug : parse dictionary
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+IsolatedStorageException: Could not find file "C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\słownik.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.InterpreterEngine.readFile (System.String filename) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IsolatedStorageException: Could not find file "C:\Users\mathewp\CurrentProjects\KCK\KelnerSimulator2014\Unity\KelnerSimulator_Data\Paths_Fiona.txt".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.AddPaths.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[T0].Invoke (.T0 arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.InputField.SendOnSubmit () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.InputField.DeactivateInputField () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.InputField.OnUpdateSelected (UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IUpdateSelectedHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IUpdateSelectedHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:SendUpdateEventToSelectedObject()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[T0].Invoke (.T0 arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.InputField.SendOnSubmit () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.InputField.DeactivateInputField () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.InputField.OnDeselect (UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDeselectHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDeselectHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.EventSystem:SetSelectedGameObject(GameObject, BaseEventData)
+UnityEngine.EventSystems.PointerInputModule:DeselectIfSelectionChanged(GameObject, BaseEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+niech kelnerka 1 odbierze zamówienie od stolika 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.InterpreterEngine.parseInput (System.String input, System.Collections.Generic.List`1 dictionary, System.Collections.Generic.List`1 cookbook) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.invokeCommand () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.CommandInterpreter.interpretCommand () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.Debug:Internal_LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+

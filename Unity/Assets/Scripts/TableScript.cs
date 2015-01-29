@@ -167,23 +167,38 @@ public class TableScript : MonoBehaviour
 
     public int AquireOrder()
     {
-        interpreter.setOutput("Stolik " + gameObject.name + " zamówił " + interpreter.cookbook[orderName][0]);
-        status = TableStatus.WaitingForOrder;
-        return orderName;
+        if (state == TableState.Busy)
+        {
+            interpreter.setOutput("Stolik " + gameObject.name + " zamówił " + interpreter.cookbook[orderName][0]);
+            status = TableStatus.WaitingForOrder;
+            return orderName;
+        }
+        else
+        {
+            
+            interpreter.setOutput("Stolik " + gameObject.name + " zamówił nic. Jak myślisz czy stolik może coś zamówić? ");
+            return -1;
+        }
     }
 
     public void ServeOrder(int meal)
     {
-        if (meal == orderName)
+        if (state == TableState.Busy)
         {
-            interpreter.setOutput("Stolik " + gameObject.name + " przyjął zamówienie i jest w trakcie spożywania.");
-            status = TableStatus.ProgressingOrder;
+            if (meal == orderName)
+            {
+                interpreter.setOutput("Stolik " + gameObject.name + " przyjął zamówienie i jest w trakcie spożywania.");
+                status = TableStatus.ProgressingOrder;
+            }
+            else
+            {
+                interpreter.setOutput("Stolik " + gameObject.name + " nie przyjął zamówienia. Błędne zamówienie.");
+            }
         }
         else
         {
-            interpreter.setOutput("Stolik " + gameObject.name + " nie przyjął zamówienia. Błędne zamówienie.");
+            interpreter.setOutput("Stolik " + gameObject.name + " nie przyjął zamówienia. Bo kto miał przyjąć zamówienie?");
         }
-        
     }
 
     public void CleanTable()

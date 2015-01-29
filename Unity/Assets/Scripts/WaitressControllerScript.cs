@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;           //Werka
 
 namespace Assets.Scripts
 {
@@ -23,6 +24,7 @@ namespace Assets.Scripts
         public float speed;
         public float rotationSpeed;
         public List<Path> avaliblePaths;
+        public Text StateText;              //Werka
 
         //Komponenty
         private Rigidbody rigidbodyComponent;
@@ -87,11 +89,13 @@ namespace Assets.Scripts
                 switch (CurrentState)
                 {
                         case States.Waiting:
+                        StateText.text = "Oczekuje na polecenie";       //Werka
                             getCommand();
                             break;
                         case States.Walking:
                             if (onPosition && !commandProceed)
                             {
+                                StateText.text = "Idę do stolika.";
                                 switch (invokeFunction)
                                 {
                                     /*
@@ -103,18 +107,21 @@ namespace Assets.Scripts
                                      */
                                     case 0:
                                         CurrentState = States.GettingOrder;
+                                        StateText.text = "Przyjmuje zamówienie od stolika";        //Werka
                                         aquireOrder();
                                         yield return new WaitForSeconds(3f);
                                         CurrentState = States.Walking;
                                         break;
                                     case 1:
                                         CurrentState = States.GettingOrder;
+                                        StateText.text = "Podaje zamówienie do stolika";        //Werka
                                         serveOrder();
                                         yield return new WaitForSeconds(3f);
                                         CurrentState = States.Walking;
                                         break;
                                     case 2:
                                         CurrentState = States.GettingOrder;
+                                        StateText.text = "Sprząta stolik";        //Werka
                                         cleanTable();
                                         yield return new WaitForSeconds(3f);
                                         CurrentState = States.Walking;
