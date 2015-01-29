@@ -4273,6 +4273,7 @@ GameObject:
   - 111: {fileID: 588435655}
   - 54: {fileID: 588435653}
   - 114: {fileID: 588435652}
+  - 114: {fileID: 588435654}
   m_Layer: 0
   m_Name: Doris
   m_TagString: Untagged
@@ -4309,17 +4310,25 @@ MonoBehaviour:
   speed: 3
   rotationSpeed: 2
   avaliblePaths:
-  - pathPoints:
-    - {fileID: 722067534}
-    - {fileID: 1222710318}
-    - {fileID: 921934249}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 583316417}
-    - {fileID: 1443345273}
-    - {fileID: 1594309451}
-    - {fileID: 137402537}
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
     PathName: 
   waitressName: 
   tables: []
@@ -4343,6 +4352,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &588435654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 588435650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6644b5290d4c493479a5e66b63cedc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: Paths_Doris.txt
 --- !u!111 &588435655
 Animation:
   m_ObjectHideFlags: 0
@@ -9842,6 +9863,7 @@ GameObject:
   - 111: {fileID: 1228508120}
   - 54: {fileID: 1228508118}
   - 114: {fileID: 1228508117}
+  - 114: {fileID: 1228508119}
   m_Layer: 0
   m_Name: Marlenka
   m_TagString: Untagged
@@ -9878,22 +9900,25 @@ MonoBehaviour:
   speed: 3
   rotationSpeed: 2
   avaliblePaths:
-  - pathPoints:
-    - {fileID: 201369850}
-    - {fileID: 981710862}
-    - {fileID: 1601552368}
-    - {fileID: 921934249}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 583316417}
-    - {fileID: 1443345273}
-    - {fileID: 1594309451}
-    - {fileID: 137402537}
-    - {fileID: 537861089}
-    - {fileID: 771409808}
-    - {fileID: 1383485251}
-    - {fileID: 1913211630}
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
+    PathName: 
+  - pathPoints: []
     PathName: 
   waitressName: 
   tables: []
@@ -9917,6 +9942,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1228508119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228508115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6644b5290d4c493479a5e66b63cedc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: Paths_Marlenka.txt
 --- !u!111 &1228508120
 Animation:
   m_ObjectHideFlags: 0
@@ -13137,6 +13174,8 @@ GameObject:
   - 111: {fileID: 1543854142}
   - 54: {fileID: 1543854140}
   - 114: {fileID: 1543854139}
+  - 114: {fileID: 1543854141}
+  - 114: {fileID: 1543854144}
   m_Layer: 0
   m_Name: Patrycja
   m_TagString: Untagged
@@ -13173,115 +13212,25 @@ MonoBehaviour:
   speed: 3
   rotationSpeed: 2
   avaliblePaths:
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 1246418235}
-    - {fileID: 1833116560}
-    - {fileID: 1995440768}
-    - {fileID: 244170232}
-    - {fileID: 2007892265}
-    - {fileID: 1970716142}
-    - {fileID: 1696418146}
-    - {fileID: 2094884670}
-    - {fileID: 1551458687}
+  - pathPoints: []
     PathName: 
   waitressName: 
   tables: []
@@ -13305,6 +13254,17 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1543854141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1543854137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab079c5740a9b449afa4c16a1a5525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!111 &1543854142
 Animation:
   m_ObjectHideFlags: 0
@@ -13382,6 +13342,18 @@ SkinnedMeshRenderer:
     m_Center: {x: -.218963206, y: .0748199224, z: 2.61506772}
     m_Extent: {x: 1.52863359, y: 1.17172563, z: 2.92809415}
   m_DirtyAABB: 0
+--- !u!114 &1543854144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1543854137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6644b5290d4c493479a5e66b63cedc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: Paths_Patrycja.txt
 --- !u!1 &1545533844
 GameObject:
   m_ObjectHideFlags: 0
@@ -15486,7 +15458,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wpisz polecenie...
+  m_Text: 
 --- !u!222 &1824489541
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16336,6 +16308,7 @@ GameObject:
   - 111: {fileID: 1913510707}
   - 54: {fileID: 1913510710}
   - 114: {fileID: 1913510709}
+  - 114: {fileID: 1913510711}
   m_Layer: 0
   m_Name: Fiona
   m_TagString: Untagged
@@ -16449,37 +16422,21 @@ MonoBehaviour:
   speed: 3
   rotationSpeed: 2
   avaliblePaths:
-  - pathPoints:
-    - {fileID: 781923156}
-    - {fileID: 781923156}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 781923156}
-    - {fileID: 781923156}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 781923156}
-    - {fileID: 781923156}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 781923156}
-    - {fileID: 781923156}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 781923156}
-    - {fileID: 781923156}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 781923156}
-    - {fileID: 781923156}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 781923156}
-    - {fileID: 781923156}
+  - pathPoints: []
     PathName: 
-  - pathPoints:
-    - {fileID: 781923156}
-    - {fileID: 781923156}
+  - pathPoints: []
     PathName: 
   - pathPoints:
     - {fileID: 781923156}
@@ -16511,6 +16468,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1913510711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913510705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6644b5290d4c493479a5e66b63cedc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: Paths_Fiona.txt
 --- !u!1 &1920602584
 GameObject:
   m_ObjectHideFlags: 0
