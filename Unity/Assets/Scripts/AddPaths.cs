@@ -27,7 +27,7 @@ namespace Assets.Scripts
                     string tmp = "Waypoint" + s;
                     Transform waypoint = GameObject.Find(tmp).GetComponent<Transform>();
                     waitress.avaliblePaths[destination].pathPoints.Add(waypoint);
-                    Debug.Log("Add to destination " + destination + " waypoint: " + tmp);
+                    //Debug.Log("Add to destination " + destination + " waypoint: " + tmp);
                 }
                 destination++;
             }
