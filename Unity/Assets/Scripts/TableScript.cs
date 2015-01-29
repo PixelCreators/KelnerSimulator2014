@@ -167,6 +167,7 @@ public class TableScript : MonoBehaviour
 
     public int AquireOrder()
     {
+        interpreter.setOutput("Stolik " + gameObject.name + " zamówił " + interpreter.cookbook[orderName][0]);
         status = TableStatus.WaitingForOrder;
         return orderName;
     }

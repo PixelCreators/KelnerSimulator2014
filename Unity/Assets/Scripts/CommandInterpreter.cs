@@ -16,7 +16,7 @@ namespace Assets.Scripts
 
         public InterpreterEngine interpreter;
         private List<List<string>> dictionary;
-        private List<List<string>> cookbook;
+        public List<List<string>> cookbook;
         public int CookbookSize = 0;
 
         [SerializeField] 
@@ -39,6 +39,7 @@ namespace Assets.Scripts
             Debug.Log("debug : parse cookbook");
             cookbook = new List<List<string>>(interpreter.readFile("potrawy.txt"));
             CookbookSize = cookbook.Count;
+            
         }
 
         public void interpretCommand()
