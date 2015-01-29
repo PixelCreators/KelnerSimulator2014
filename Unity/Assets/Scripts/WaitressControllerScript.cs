@@ -28,6 +28,7 @@ namespace Assets.Scripts
         private Rigidbody rigidbodyComponent;
         private Animation animationComponent;
         private Transform currentTargetObject;
+        private CommandInterpreter commandInterpreter;
 
         //Zmienne prywatne
         private float angle;
@@ -50,6 +51,7 @@ namespace Assets.Scripts
 
         private void Awake()
         {
+            commandInterpreter = GameObject.Find("Gameplay").GetComponent<CommandInterpreter>(); 
             tables.Add(null);       //Brzydkie, ale nie chcialem juz zmieniac kolejnosci stolikow. TODO: Poprawic! 
             for(int i = 1; i <= 9; i++)
                 tables.Add(GameObject.Find(i.ToString()).GetComponent<TableScript>());
@@ -99,19 +101,19 @@ namespace Assets.Scripts
                                      *  2 - poda
                                      *  3 - sprzątnie
                                      */
-                                    case 1:
+                                    case 0:
                                         CurrentState = States.GettingOrder;
                                         aquireOrder();
                                         yield return new WaitForSeconds(3f);
                                         CurrentState = States.Walking;
                                         break;
-                                    case 2:
+                                    case 1:
                                         CurrentState = States.GettingOrder;
                                         serveOrder();
                                         yield return new WaitForSeconds(3f);
                                         CurrentState = States.Walking;
                                         break;
-                                    case 3:
+                                    case 2:
                                         CurrentState = States.GettingOrder;
                                         cleanTable();
                                         yield return new WaitForSeconds(3f);
@@ -135,18 +137,22 @@ namespace Assets.Scripts
 
         void aquireOrder()
         {
+            commandInterpreter.setOutput(waitressName + " odbiera zamówienie ze stolika " + currentTable);
             tables[currentTable].AquireOrder();
             commandProceed = true;
         }
 
         void serveOrder()
         {
-            tables[currentTable].ServeOrder();
+            commandInterpreter.setOutput(waitressName + " podaje zamówienie do stolika " + currentTable);
+            tables[currentTable].ServeOrder(carryingMeal);
             commandProceed = true;
         }
 
         void cleanTable()
         {
+
+            commandInterpreter.setOutput(waitressName + " czyści stolik " + currentTable);
             tables[currentTable].CleanTable();
             commandProceed = true;
         }
@@ -232,10 +238,14 @@ namespace Assets.Scripts
             return false;
         }
 
-        void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
+            Debug.Log("Trigger");
             if (currentTable.ToString().Equals((other.gameObject.name)))
+            {
                 onPosition = true;
+                Debug.Log("On Position");
+            }
         }
 
     }

@@ -1,53 +1,19 @@
 Barszcz
 Rosół
-[Zupa z cukinii]
-kurczak [Filet z kurczaka]
-[Filet z kurczaka w sosie curry]
-[Filet z kurczaka w figach i miodzie]
+kurczak 
 Sajgonki
-[Sajgonki wegetariańskie]
 schab
-[Schab pieczony]
-[Schab pieczony ze śliwką]
 Stek
-[Krwisty stek]
-[Stek z cykorią]
 Sushi
 łosoś
-[Łosoś wędzony]
-[Łosoś wędzony ze szpinakiem]
 Tuńczyk
-[Tuńczyk z rabarbarem]
-lody bananowe [Deser lodowy bananowy]
-lody czekoladowe [Deser lodowy czekoladowy]
-lody malinowe [Deser lodowy malinowy]
 Sernik
 Szarlotka
-Tarta cytrynowa
 Americano
-[Americano z mlekiem]
 Espresso
 Cappuccino
 Frappuccino
 Latte
 Cydr
 Wino
-[Woda gazowana]
-Woda [Woda niegazowana]
-[Sok pomarańczowy]
-[Sok jabłkowy] 
-[Barszcz królewski]
-[Filet z kurczaka grillowany]
-[Schab pieczony z kapustą]
-[Sushi Hosomaki] [Sushi Hosomaki z tykwą]
-[Sushi Nigiri] [Sushi Nigiri z awokado]
-[Deser lodowy Mango] [Deser lodowy Mango Tropic]
-[Sernik z białą czekoladą]
-[Szarlotka z lodami]
-[Świąteczny orzechowiec]
-[Americano czarne]
-[Espresso Doppio]
-[Chai Latte Vanilla Kashmir]
-[Wino Chardonnay]
-[Wino marki wino]
-[Wino Bordeaux]
+Woda 

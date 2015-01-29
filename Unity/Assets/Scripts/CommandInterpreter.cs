@@ -73,6 +73,7 @@ namespace Assets.Scripts
 
         void sendCommandData(int waitId, List<int> commandTranslation )
         {
+            Debug.Log(waitId);
             waitresses[waitId].doingSomething = true;
             waitresses[waitId].invokeFunction = commandTranslation[1];
             waitresses[waitId].carryingMeal = commandTranslation[2];
@@ -82,6 +83,12 @@ namespace Assets.Scripts
        void showLastCommand()
         {
             lastCommandText.text += lastCommand + "\n";
+            Scrollbar.value = 0;
+        }
+
+        public void setOutput(string cmd)
+        {
+            lastCommandText.text += cmd + "\n";
             Scrollbar.value = 0;
         }
 

@@ -115,17 +115,17 @@ public class TableScript : MonoBehaviour
                     //TODO: Zmienić stałe na losowe w ostatecznej wersji. Do debbugingu lepsze stałe czasy jednak.
                     if (status == TableStatus.Clean)
                     {
-                        yield return new WaitForSeconds(3f);
+                        yield return new WaitForSeconds(Random.Range(2, 10));
                         status = TableStatus.ChoosingOrder;
                     }
                     else if (status == TableStatus.ChoosingOrder)
                     {
-                        yield return new WaitForSeconds(3f);
+                        yield return new WaitForSeconds(Random.Range(2, 5));
                         ChooseOrder();
                     }
                     else if (status == TableStatus.ProgressingOrder)
                     {
-                        yield return new WaitForSeconds(3f);
+                        yield return new WaitForSeconds(Random.Range(10, 30));
                         setGuestsVisible(false);
                         status = TableStatus.Dirty;
                     }
@@ -156,6 +156,7 @@ public class TableScript : MonoBehaviour
     {   
         //Implementacja losowości zamówienia.
         orderName = Random.Range(0, interpreter.CookbookSize + 1);
+        interpreter.setOutput("Stolik " + gameObject.name + " jest gotowy do złożenia zamówienia.");
         status = TableStatus.OrderReady;
     }
     
@@ -165,14 +166,23 @@ public class TableScript : MonoBehaviour
     /*  Interakcja stolika z kelnerką  */
 
     public int AquireOrder()
-    { 
+    {
         status = TableStatus.WaitingForOrder;
         return orderName;
     }
 
-    public void ServeOrder()
+    public void ServeOrder(int meal)
     {
-        status = TableStatus.ProgressingOrder;
+        if (meal == orderName)
+        {
+            interpreter.setOutput("Stolik " + gameObject.name + " przyjął zamówienie i jest w trakcie spożywania.");
+            status = TableStatus.ProgressingOrder;
+        }
+        else
+        {
+            interpreter.setOutput("Stolik " + gameObject.name + " nie przyjął zamówienia. Błędne zamówienie.");
+        }
+        
     }
 
     public void CleanTable()

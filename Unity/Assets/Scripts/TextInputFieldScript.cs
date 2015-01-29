@@ -17,5 +17,6 @@ namespace Assets.Scripts
             return currentInputFieldText.text;
         }
 
+
     }
 }
