@@ -7,19 +7,12 @@ namespace Assets.Scripts
     
     public class CommandInterpreter : MonoBehaviour 
     {
-        enum WaitresesNames
-        {
-            None,
-            Patrycja,
-            Doris,
-            Marlenka,
-            Fiona
-
-        }
+      
 
         public TextInputFieldScript inputCommandField;
 
         public Text lastCommandText;
+        public Scrollbar Scrollbar;
 
         public InterpreterEngine interpreter;
         private List<List<string>> dictionary;
@@ -33,9 +26,6 @@ namespace Assets.Scripts
 
         void Awake()
         {
-            inputCommandField = GameObject.Find("InputCommandFieldText").GetComponent<TextInputFieldScript>();
-            lastCommandText = GameObject.Find("LastCommand").GetComponent<Text>();
-        
         }
 
         void Start()
@@ -86,17 +76,18 @@ namespace Assets.Scripts
             waitresses[waitId].doingSomething = true;
             waitresses[waitId].invokeFunction = commandTranslation[1];
             waitresses[waitId].carryingMeal = commandTranslation[2];
-            waitresses[waitId].currentTable = commandTranslation[3] + 1;
+            waitresses[waitId].currentTable = commandTranslation[3];
         }
 
        void showLastCommand()
         {
-            lastCommandText.text = lastCommand;
+            lastCommandText.text += lastCommand + "\n";
+            Scrollbar.value = 0;
         }
 
         void getCommandFromInput()
         {
-            lastCommand = inputCommandField.getCommandFromInput();
+           lastCommand = inputCommandField.getCommandFromInput();
         }
     }
 }

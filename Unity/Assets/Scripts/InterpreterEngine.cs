@@ -73,7 +73,7 @@ namespace Assets.Scripts
 
         public List<int> parseInput(string input, List<List<string>> dictionary, List<List<string>> cookbook)
         {
-
+            Debug.Log(input);
             List<string> listInput = new List<string>();
 			List<int> listInputParsed = new List<int>();
             listInput = input.Split(' ').ToList<string>();

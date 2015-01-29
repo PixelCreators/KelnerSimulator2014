@@ -71,7 +71,7 @@ public class TableScript : MonoBehaviour
          * 
          * Gdy Stolik jest brudny - E aby wyczyscic
          */
-
+        /*
         if (status == TableStatus.OrderReady)
             if (Input.GetKeyDown(KeyCode.Q))
                 AquireOrder();
@@ -82,7 +82,7 @@ public class TableScript : MonoBehaviour
 
         if (status == TableStatus.Dirty)
             if (Input.GetKeyDown(KeyCode.E))
-                CleanTable();
+                CleanTable();*/
         
     }
 
